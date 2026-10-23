@@ -116,6 +116,7 @@
     .stat { gap: 4px; }
     .stat .big { font-size: 48px; }
   }
+  @media (min-width: 761px) { .trades { flex-wrap: nowrap; } .trades li { white-space: nowrap; } }
   @media (max-width: 360px) { .brand small { display: none; } }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .cta:not(.secondary) { color: #0d1a14; }
@@ -152,7 +153,7 @@
   <section>
     <h2>Trades I cover</h2>
     <ul class="trades">
-      <li>Commercial cleaning (including washrooms)</li><li>Grounds maintenance</li><li>Tree surgery</li>
+      <li>Commercial cleaning</li><li>Grounds maintenance</li><li>Tree surgery</li>
       <li>Scrap metal and recycling</li><li>Building repairs and maintenance</li>
     </ul>
   </section>
