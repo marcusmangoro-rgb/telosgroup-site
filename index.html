@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telos Group · Public tenders for small contractors</title>
+<meta name="description" content="Public-sector tenders matched to your trade, area and contract size, sent every Monday morning.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #17202a;
+    --body: #3b4654;
+    --muted: #5d6877;
+    --rule: #dfe5ec;
+    --paper: #ffffff;
+    --wash: #f4f7f5;
+    --green: #1f7355;
+    --amber: #96591b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e9eef3; --body: #c3ccd6; --muted: #9aa6b4; --rule: #2a3440;
+      --paper: #11171d; --wash: #161e25; --green: #4cbf92; --amber: #d2913c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--body);
+    font: 17px/1.6 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--green); }
+  a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  header.top { border-bottom: 1px solid var(--rule); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; font-size: 18px; }
+  .brand img { width: 32px; height: 32px; display: block; }
+  .top a.contact { font-size: 15px; }
+
+  .hero { padding: 64px 0 40px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
+  h1 { font-size: 40px; line-height: 1.15; color: var(--ink); margin: 0 0 18px; letter-spacing: -0.02em; font-weight: 700; }
+  .lede { font-size: 19px; margin: 0 0 24px; max-width: 34em; }
+  .cta { display: inline-block; background: var(--green); color: #fff; text-decoration: none; padding: 12px 18px; border-radius: 6px; font-weight: 600; }
+  .cta:hover { filter: brightness(1.08); }
+  .note { font-size: 15px; color: var(--muted); margin-top: 12px; }
+
+  /* The sample email: the real format of a Monday email */
+  .mail { border: 1px solid var(--rule); border-radius: 10px; background: var(--paper); box-shadow: 0 1px 0 var(--rule); overflow: hidden; }
+  .mail .meta { padding: 12px 16px; border-bottom: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
+  .mail .meta b { color: var(--ink); font-weight: 600; }
+  .mail .body { padding: 14px 16px 6px; font-size: 14px; }
+  .mail .body p { margin: 0 0 10px; }
+  .t { border-left: 3px solid var(--green); padding: 1px 0 1px 11px; margin: 0 0 14px; }
+  .t.two { border-left-color: var(--amber); }
+  .t .n { font-weight: 700; color: var(--ink); }
+  .t .w { margin: 1px 0 3px; }
+  .t .f { color: var(--muted); font-size: 13px; }
+  .t .l { font-size: 13px; }
+
+  section { padding: 40px 0; border-top: 1px solid var(--rule); }
+  h2 { font-size: 24px; color: var(--ink); margin: 0 0 20px; letter-spacing: -0.01em; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; counter-reset: s; }
+  .steps div { counter-increment: s; }
+  .steps div::before { content: counter(s); display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--wash); color: var(--green); font-weight: 700; margin-bottom: 10px; }
+  .steps h3 { font-size: 17px; color: var(--ink); margin: 0 0 6px; }
+  .steps p { margin: 0; font-size: 16px; }
+
+  .trades { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0; padding: 0; list-style: none; }
+  .trades li { background: var(--wash); border: 1px solid var(--rule); border-radius: 999px; padding: 5px 12px; font-size: 15px; color: var(--ink); }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .two-col p { margin: 0 0 12px; }
+
+  footer { border-top: 1px solid var(--rule); padding: 24px 0 40px; font-size: 14px; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; padding: 40px 0 28px; gap: 32px; }
+    h1 { font-size: 31px; }
+    .steps, .two-col { grid-template-columns: 1fr; gap: 22px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="logo.svg" alt="" width="32" height="32">Telos Group</a>
+    <a class="contact" href="mailto:marcus.mangoro@gmail.com">Contact</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Public tenders that fit your firm, every Monday morning.</h1>
+      <p class="lede">Councils, schools, NHS trusts and housing associations put contracts out to tender every week. We read them all and send you only the ones that match your trade, your area and the size of job you go for.</p>
+      <a class="cta" href="mailto:marcus.mangoro@gmail.com?subject=Add%20me%20to%20the%20Monday%20email">Get the Monday email</a>
+      <p class="note">Already going out to 10+ firms in cleaning, grounds, waste and building maintenance.</p>
+    </div>
+
+    <figure class="mail" aria-label="An example Monday email">
+      <div class="meta"><b>This week's tenders: Bishop Auckland College and 5 others</b><br>Monday, 8:45am</div>
+      <div class="body">
+        <p>Here are this week's tenders that fit what you go for.</p>
+        <div class="t">
+          <div class="n">1. Bishop Auckland College</div>
+          <div class="w">Cleaning</div>
+          <div class="f">£1.2m over 3 years · about 59 miles from you · closes Fri 13 Nov</div>
+          <div class="l"><a href="https://www.find-tender.service.gov.uk/Notice/097785-2026">View the notice</a> · Directions</div>
+        </div>
+        <div class="t">
+          <div class="n">2. Nottingham Trent University</div>
+          <div class="w">Window cleaning across its campuses</div>
+          <div class="f">£500k over 2 years · about 99 miles from you · closes Mon 16 Nov</div>
+          <div class="l"><a href="https://www.find-tender.service.gov.uk/Notice/097912-2026">View the notice</a> · Directions</div>
+        </div>
+        <div class="t two">
+          <div class="n">3. Cotham School, Bristol</div>
+          <div class="w">Cleaning (two-stage tender)</div>
+          <div class="f">£1.5m over 3 years · requests to take part close Fri 11 Dec</div>
+          <div class="l"><a href="https://www.find-tender.service.gov.uk/Notice/097598-2026">View the notice</a> · Directions</div>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div><h3>We watch every notice</h3><p>Find a Tender and Contracts Finder, the government's own sites, checked every week. Nothing is behind a paywall; we just do the reading.</p></div>
+      <div><h3>We match it to you</h3><p>Your trade, how far you'll travel and the contract sizes you can take on. Two-stage tenders show the real first deadline, not the last one.</p></div>
+      <div><h3>You get a short list</h3><p>The best six, with a map and a link to each notice. Tell us what's useful and what isn't, and next week's list gets sharper.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trades we cover</h2>
+    <ul class="trades">
+      <li>Commercial cleaning</li><li>Washroom and hygiene</li><li>Grounds maintenance</li><li>Tree surgery</li>
+      <li>Waste and recycling</li><li>Scrap metal</li><li>Building repairs and maintenance</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="two-col">
+      <div>
+        <h2>Also in each email</h2>
+        <p><b>Coming up:</b> contracts near you that end in the next 6 to 15 months, and who holds them now, so you can get known to the buyer before it's re-tendered.</p>
+        <p><b>Closing soon:</b> a reminder of anything we sent earlier that's about to close.</p>
+      </div>
+      <div>
+        <h2>Who's behind it</h2>
+        <p>I'm Marcus Mangoro. I started Telos Group to make public contracts easier for small firms to find. Most of this work is published openly, but it's spread across thousands of notices a week, and small firms don't have a bid team to read them.</p>
+        <p>Questions, or want to be added? Email <a href="mailto:marcus.mangoro@gmail.com">marcus.mangoro@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Telos Group</span>
+    <span><a href="privacy.html">Privacy and how we use your details</a></span>
+    <span>Contains public sector information licensed under the Open Government Licence v3.0.</span>
+  </div>
+</footer>
+</body>
+</html>
