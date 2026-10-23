@@ -90,9 +90,35 @@
 
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding: 40px 0 28px; gap: 32px; }
-    h1 { font-size: 31px; }
     .two-col, .stat { grid-template-columns: 1fr; gap: 18px; }
     .stat .big { font-size: 44px; }
+  }
+
+  /* review fixes 23 Oct */
+  h1, h2, h3, summary { text-wrap: balance; }
+  p, .flow span { text-wrap: pretty; }
+  h2 { line-height: 1.25; }
+  h1 { font-size: clamp(30px, 4.2vw + 12px, 42px); }
+  .stat p, .ai p { max-width: 65ch; }
+  .lede, .freq { max-width: 60ch; }
+  .flow li { margin-bottom: 28px; }
+  .flow li::after { left: calc(50% - 1px); bottom: -22px; height: 13px; background: var(--muted); }
+  .flow li::before { left: calc(50% - 6px); bottom: -28px; border-width: 7px 6px 0; border-style: solid; border-color: var(--muted) transparent transparent; }
+  .top .links a { display: inline-block; padding: 12px 6px; margin-left: 8px; }
+  footer a { display: inline-block; padding: 6px 0; }
+  .two-col { row-gap: 36px; }
+  .ai { padding-bottom: 56px; }
+  section { padding: clamp(32px, 5vw, 48px) 0; }
+  @media (max-width: 880px) {
+    .hero { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 760px) {
+    .stat { gap: 4px; }
+    .stat .big { font-size: 48px; }
+  }
+  @media (max-width: 360px) { .brand small { display: none; } }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .cta:not(.secondary) { color: #0d1a14; }
   }
 </style>
 </head>
@@ -107,18 +133,18 @@
 <main class="wrap">
   <div class="hero">
     <div>
-      <h1>Public tenders that actually fit your firm, sent to you every Monday.</h1>
+      <h1>Public contracts that fit your firm, in your inbox every Monday.</h1>
       <p class="lede">Public buyers post thousands of tenders a week, and most won't suit you. I find the ones that match your trade, your area and the size of job you go for.</p>
       <a class="cta" href="mailto:mangoro@telosgroup.co.uk?subject=Send%20me%20my%20tender%20email">Get your tender email</a>
-      <p class="freq">It lands every Monday morning, or daily or monthly if that suits you better.</p>
-      <p class="note">I've already sent tenders to 15+ firms in cleaning, grounds, waste and building maintenance.</p>
+      <p class="freq">It comes every Monday morning. If you'd rather have it daily or monthly, just ask.</p>
+      <p class="note">I've already sent tenders to more than 15 firms, from cleaners to grounds and building maintenance firms.</p>
     </div>
 
     <ol class="flow" aria-label="How it works">
-      <li><b>Buyers publish their tenders</b><span>Every public buyer in England posts its tenders on Find a Tender or Contracts Finder, thousands of them a week.</span></li>
+      <li><b>Buyers publish their tenders</b><span>Public buyers in England post thousands of tenders a week on Find a Tender and Contracts Finder.</span></li>
       <li><b>AI-powered matching</b><span>A multi-factor scoring model rates every notice on trade, distance, contract size and buyer fit, and a language model screens out the false positives. Only the top-ranked make your list.</span></li>
-      <li><b>Your email lands on Monday</b><span>You get the best few, each with the real deadline, a map and a link, plus contracts near you coming up for renewal.</span></li>
-      <li class="end"><b>You decide what to go for</b><span>Tell me what's useful and what isn't, and each list gets sharper.</span></li>
+      <li><b>Your email lands on Monday</b><span>You get the few that suit you best, with the real deadline and a link to each one.</span></li>
+      <li class="end"><b>You decide what to go for</b><span>Reply and tell me what's useful and what isn't, and I'll change what I send you.</span></li>
     </ol>
   </div>
 
@@ -135,8 +161,8 @@
   <section class="stat">
     <div class="big">8 in 10</div>
     <div>
-      <h2>Most small contracts in these trades never get advertised on Find a Tender</h2>
-      <p>I looked at 1,427 contracts awarded in these trades from January to October 2026. Of the 659 worth under £140k, about 8 in 10 had no tender notice on Find a Tender. They only appeared once the work had been awarded, usually to firms the buyer already knew.</p>
+      <h2>Most small contracts in these trades weren't advertised on Find a Tender</h2>
+      <p>I looked at 1,427 contracts awarded in these trades from January to October 2026. Of the 659 worth under £140k, about 8 in 10 had no tender notice on Find a Tender. They only showed up once the work had been awarded.</p>
       <p>Alert services only show what's advertised, so each email also flags a contract near you that's ending soon and who holds it. That gives you a chance to get known to the buyer before they next ask for quotes.</p>
       <p class="src">Source: Telos Group analysis of Find a Tender award and tender notices, January to October 2026. Some of these contracts may have been advertised on Contracts Finder or elsewhere, so treat the figure as an estimate. Under £140k means below the central government services threshold of £139,688.</p>
     </div>
@@ -150,15 +176,15 @@
       </div>
       <div>
         <h2>Who's behind it</h2>
-        <p>I'm Marcus. A lot of good public work goes to whoever happens to spot it, and most small firms don't have a bid team looking for it. I started Telos Group to do that for them.</p>
-        <p>Questions, or want to be added? Email <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> and I'll reply myself.</p>
+        <p>I'm Marcus. A lot of good public work goes to whoever happens to spot it, and most small firms don't have a bid team looking for it. I started Telos Group to do the looking for them.</p>
+        <p>To get on the list, email me at <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> with your trade and the area you cover, and I'll send you this week's tenders. I check every list myself before it goes out.</p>
       </div>
     </div>
   </section>
 
   <section class="ai">
     <h2>Wondering what AI could do for your business?</h2>
-    <p>AI can now take a lot of admin off a small firm's plate, from turning site notes into quotes to renewal reminders, client reports and reusing your best tender answers. If a job eats more of your week than it should, get in touch for a quick, no-obligation chat.</p>
+    <p>AI can now do some of the admin that eats a small firm's week, like turning site notes into quotes. If there's a job you'd happily hand over, email me and I'll tell you honestly whether it can help.</p>
     <a class="cta secondary" href="mailto:mangoro@telosgroup.co.uk?subject=AI%20for%20my%20business">Get in touch</a>
   </section>
 </main>

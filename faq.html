@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root { --ink:#17202a; --body:#3b4654; --muted:#5d6877; --rule:#dfe5ec; --paper:#fff; --wash:#f4f7f5; --green:#1f7355; }
   @media (prefers-color-scheme: dark) {
@@ -26,14 +26,16 @@
   .brand img { width: 32px; height: 32px; display: block; }
   .brand span { display: flex; flex-direction: column; line-height: 1.15; }
   .brand small { font-size: 12px; font-weight: 500; color: var(--muted); }
-  nav a { font-size: 15px; margin-left: 18px; }
+  nav a { font-size: 15px; display: inline-block; padding: 12px 6px; margin-left: 8px; }
+  p { text-wrap: pretty; }
+  @media (max-width: 360px) { .brand small { display: none; } }
   h1 { color: var(--ink); font-size: 34px; letter-spacing: -0.02em; margin: 40px 0 6px; }
   .lede { margin: 0 0 28px; color: var(--muted); }
   details { border-bottom: 1px solid var(--rule); }
   details:first-of-type { border-top: 1px solid var(--rule); }
-  summary { cursor: pointer; list-style: none; padding: 16px 32px 16px 0; color: var(--ink); font-weight: 600; position: relative; }
+  summary { cursor: pointer; list-style: none; padding: 18px 32px 18px 0; text-wrap: balance; color: var(--ink); font-weight: 600; position: relative; }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; position: absolute; right: 4px; top: 14px; font-size: 22px; color: var(--green); font-weight: 400; }
+  summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--green); font-weight: 400; }
   details[open] summary::after { content: "–"; }
   details p { margin: 0 0 14px; max-width: 42em; }
   details > div { padding: 0 0 6px; }
@@ -57,37 +59,37 @@
 
   <details open>
     <summary>What is Telos Group?</summary>
-    <div><p>A small business run by Marcus. We send small contractors a short list of public tenders that fit their trade, area and size of job, so they don't have to search the government sites themselves.</p></div>
+    <div><p>A small business run by me, Marcus. I send small contractors a short list of public tenders that fit their trade, area and size of job, so they don't have to search the government sites themselves.</p></div>
   </details>
 
   <details>
     <summary>Where do the tenders come from?</summary>
-    <div><p>The government's own sites: Find a Tender and Contracts Finder. Every public buyer in England has to publish its tenders there, from councils and schools to NHS trusts and housing associations. We also use the published award records to see when existing contracts end.</p></div>
+    <div><p>The government's own sites, Find a Tender and Contracts Finder, where councils, schools, NHS trusts and housing associations post their tenders. I also use the published award records to see when existing contracts end.</p></div>
   </details>
 
   <details>
     <summary>How do you decide what to send me?</summary>
-    <div><p>We match each new notice against what you've told us: your trade, where you work or how far you'll travel, and the contract sizes you take on. The best few go at the top, nearest and best-sized first. The more you tell us about what's useful, the better the list gets.</p></div>
+    <div><p>I match each new notice against what you've told me: your trade, where you work or how far you'll travel, and the contract sizes you take on. The best few go at the top, nearest and best-sized first. The more you tell me about what's useful, the better it fits.</p></div>
   </details>
 
   <details>
     <summary>How does the AI matching work?</summary>
-    <div><p>Every new notice is checked against your trade, how far you'll travel and your usual contract size, then scored for how well it fits. AI reads each notice to weed out the ones that only look relevant: supply-only contracts, consultancy, or a "cleaning" contract that's really drains or vehicles. The best few go to the top of your list, and a person checks the list before it's sent.</p></div>
+    <div><p>Every new notice is checked against your trade, how far you'll travel and your usual contract size, then scored for how well it fits. AI reads each notice to weed out the ones that only look relevant: supply-only contracts, consultancy, or a "cleaning" contract that's really drains or vehicles. The best few go to the top of your list, and I check every list before it's sent.</p></div>
   </details>
 
   <details>
     <summary>How often will I hear from you?</summary>
-    <div><p>Every Monday morning. If you'd like them more or less often, tell us and we'll see what we can do.</p></div>
+    <div><p>Every Monday morning. If you'd rather have them daily or monthly, just ask.</p></div>
   </details>
 
   <details>
     <summary>What trades and areas do you cover?</summary>
-    <div><p>Commercial cleaning (including washrooms), grounds maintenance, tree surgery, scrap metal and recycling, and building repairs and maintenance, anywhere in England. Scotland and Wales use different tender sites, which we don't cover yet.</p></div>
+    <div><p>Commercial cleaning (including washrooms), grounds maintenance, tree surgery, scrap metal and recycling, and building repairs and maintenance, anywhere in England. Scotland and Wales use different tender sites, which I don't cover yet.</p></div>
   </details>
 
   <details>
     <summary>What is a two-stage tender?</summary>
-    <div><p>Some buyers shortlist first. You send a short "request to take part" by an early deadline, and only shortlisted firms are invited to bid in full. It's easy to miss because the final deadline is often the one people notice. We always show you the first deadline.</p></div>
+    <div><p>Some buyers shortlist first. You send a short "request to take part" by an early deadline, and only shortlisted firms are invited to bid in full. It's easy to miss because the final deadline is often the one people notice. I always show you the first deadline.</p></div>
   </details>
 
   <details>
@@ -97,22 +99,22 @@
 
   <details>
     <summary>Do you bid for us?</summary>
-    <div><p>No. You decide what to go for and you submit the bid. If a tender looks worth it and you'd like a second pair of eyes, reply to the email and we'll talk it through.</p></div>
+    <div><p>No. You decide what to go for and you submit the bid. If a tender looks worth it and you'd like a second pair of eyes, reply to the email and we can talk it through.</p></div>
   </details>
 
   <details>
     <summary>Where did you get my email address?</summary>
-    <div><p>If we emailed you first, it's because your business won or was listed on a public contract, and the buyer published that award with a business contact address. Some addresses come from a firm's own website. The <a href="privacy.html">privacy page</a> has the details.</p></div>
+    <div><p>If I emailed you first, it's because your business won or was listed on a public contract, and the buyer published that award with a business contact address. Some addresses come from a firm's own website. The <a href="privacy.html">privacy page</a> has the details.</p></div>
   </details>
 
   <details>
     <summary>How do I change what I get, or stop?</summary>
-    <div><p>Reply to any email. Tell us what to change, or that you'd rather not hear from us, and we'll sort it straight away.</p></div>
+    <div><p>Reply to any email. Tell us what to change, or that you'd rather not hear from us, and I'll sort it straight away.</p></div>
   </details>
 
   <details>
     <summary>Can you help with things other than tenders?</summary>
-    <div><p>Possibly. A lot of small-firm admin, like quotes, rotas, compliance reminders and client reports, can now be cut down with AI. If there's a job that eats your week, tell us about it and we'll say honestly whether we can help.</p></div>
+    <div><p>Possibly. A lot of small-firm admin, like quotes, rotas, compliance reminders and client reports, can now be cut down with AI. If there's a job that eats your week, tell me about it and I'll say honestly whether I can help.</p></div>
   </details>
 
   <div class="ask"><p><b>Didn't find your answer?</b> Email <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> and Marcus will reply himself.</p></div>
