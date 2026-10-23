@@ -94,6 +94,7 @@
     .stat .big { font-size: 44px; }
   }
 
+  .video video { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--rule); background: #0f3d33; }
   /* review fixes 23 Oct */
   h1, h2, h3, summary { text-wrap: balance; }
   p, .flow span { text-wrap: pretty; }
@@ -149,6 +150,14 @@
     </ol>
   </div>
 
+
+  <section class="video">
+    <h2>See it in 20 seconds</h2>
+    <video controls playsinline preload="metadata" poster="telos-video-poster.jpg" width="1920" height="1080">
+      <source src="telos-video.mp4" type="video/mp4">
+      Your browser can't play this video. <a href="telos-video.mp4">Download it instead</a>.
+    </video>
+  </section>
 
   <section>
     <h2>Trades we cover</h2>
