@@ -36,5 +36,47 @@ Email mangoro@telosgroup.co.uk with your trade and the area you cover. Marcus re
 - [Home](https://telosgroup.co.uk/)
 - [FAQ](https://telosgroup.co.uk/faq.html)
 - [Privacy and how we use your details](https://telosgroup.co.uk/privacy.html)
+- [Public contracts coming up, by trade and area](https://telosgroup.co.uk/contracts/)
+- [How we counted](https://telosgroup.co.uk/contracts/how-we-counted.html)
+
+## Contracts coming up, by trade and area
+
+Each page counts public contracts in one trade and one part of the UK whose current term ends in the next <!--gen:window_months-->18<!--/gen:window_months--> months, with value bands, the quarters the terms end in and up to three anonymised examples. It names no buyers or suppliers.
+
+<!--gen:contracts_pages-->
+- [Building maintenance contracts, east midlands](https://telosgroup.co.uk/contracts/building-maintenance-contracts-east-midlands.html): 31 contracts, data as of 2026-11-15
+- [Building maintenance contracts, east of england](https://telosgroup.co.uk/contracts/building-maintenance-contracts-east-of-england.html): 23 contracts, data as of 2026-11-15
+- [Building maintenance contracts, london](https://telosgroup.co.uk/contracts/building-maintenance-contracts-london.html): 44 contracts, data as of 2026-11-15
+- [Building maintenance contracts, north east](https://telosgroup.co.uk/contracts/building-maintenance-contracts-north-east.html): 16 contracts, data as of 2026-11-15
+- [Building maintenance contracts, north west](https://telosgroup.co.uk/contracts/building-maintenance-contracts-north-west.html): 17 contracts, data as of 2026-11-15
+- [Building maintenance contracts, scotland](https://telosgroup.co.uk/contracts/building-maintenance-contracts-scotland.html): 123 contracts, data as of 2026-11-15
+- [Building maintenance contracts, south east](https://telosgroup.co.uk/contracts/building-maintenance-contracts-south-east.html): 55 contracts, data as of 2026-11-15
+- [Building maintenance contracts, south west](https://telosgroup.co.uk/contracts/building-maintenance-contracts-south-west.html): 28 contracts, data as of 2026-11-15
+- [Building maintenance contracts, west midlands](https://telosgroup.co.uk/contracts/building-maintenance-contracts-west-midlands.html): 19 contracts, data as of 2026-11-15
+- [Building maintenance contracts, yorkshire](https://telosgroup.co.uk/contracts/building-maintenance-contracts-yorkshire.html): 21 contracts, data as of 2026-11-15
+- [Cleaning contracts, east midlands](https://telosgroup.co.uk/contracts/cleaning-contracts-east-midlands.html): 27 contracts, data as of 2026-11-15
+- [Cleaning contracts, east of england](https://telosgroup.co.uk/contracts/cleaning-contracts-east-of-england.html): 64 contracts, data as of 2026-11-15
+- [Cleaning contracts, london](https://telosgroup.co.uk/contracts/cleaning-contracts-london.html): 67 contracts, data as of 2026-11-15
+- [Cleaning contracts, north east](https://telosgroup.co.uk/contracts/cleaning-contracts-north-east.html): 20 contracts, data as of 2026-11-15
+- [Cleaning contracts, north west](https://telosgroup.co.uk/contracts/cleaning-contracts-north-west.html): 46 contracts, data as of 2026-11-15
+- [Cleaning contracts, scotland](https://telosgroup.co.uk/contracts/cleaning-contracts-scotland.html): 62 contracts, data as of 2026-11-15
+- [Cleaning contracts, south east](https://telosgroup.co.uk/contracts/cleaning-contracts-south-east.html): 70 contracts, data as of 2026-11-15
+- [Cleaning contracts, south west](https://telosgroup.co.uk/contracts/cleaning-contracts-south-west.html): 69 contracts, data as of 2026-11-15
+- [Cleaning contracts, west midlands](https://telosgroup.co.uk/contracts/cleaning-contracts-west-midlands.html): 56 contracts, data as of 2026-11-15
+- [Cleaning contracts, yorkshire](https://telosgroup.co.uk/contracts/cleaning-contracts-yorkshire.html): 36 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, east midlands](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-east-midlands.html): 33 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, east of england](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-east-of-england.html): 47 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, london](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-london.html): 20 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, north west](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-north-west.html): 40 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, scotland](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-scotland.html): 60 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, south east](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-south-east.html): 53 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, south west](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-south-west.html): 30 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, west midlands](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-west-midlands.html): 20 contracts, data as of 2026-11-15
+- [Grounds maintenance contracts, yorkshire](https://telosgroup.co.uk/contracts/grounds-maintenance-contracts-yorkshire.html): 48 contracts, data as of 2026-11-15
+- [Tree surgery contracts, london](https://telosgroup.co.uk/contracts/tree-surgery-contracts-london.html): 16 contracts, data as of 2026-11-15
+- [Tree surgery contracts, south east](https://telosgroup.co.uk/contracts/tree-surgery-contracts-south-east.html): 21 contracts, data as of 2026-11-15
+- [Waste collection contracts, north west](https://telosgroup.co.uk/contracts/waste-collection-contracts-north-west.html): 20 contracts, data as of 2026-11-15
+- [Waste collection contracts, south east](https://telosgroup.co.uk/contracts/waste-collection-contracts-south-east.html): 22 contracts, data as of 2026-11-15
+<!--/gen:contracts_pages-->
 
 Contains public sector information licensed under the Open Government Licence v3.0.
