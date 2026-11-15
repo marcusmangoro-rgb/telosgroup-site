@@ -5,24 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy · Telos Group</title>
 <link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="How Telos Group gets, uses and keeps business contact details, and how to stop our emails.">
+<link rel="canonical" href="https://telosgroup.co.uk/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Telos Group">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://telosgroup.co.uk/privacy.html">
+<meta property="og:title" content="Privacy · Telos Group">
+<meta property="og:description" content="How Telos Group gets, uses and keeps business contact details, and how to stop our emails.">
+<meta property="og:image" content="https://telosgroup.co.uk/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Telos Group: public contracts that fit your firm, in your inbox every Monday.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  :root { --ink:#17202a; --body:#3b4654; --muted:#5d6877; --rule:#dfe5ec; --paper:#fff; --green:#1f7355; }
+  /* IBM Plex Sans, served from this site (one variable file, weights 400 to 700, Latin; SIL OFL, fonts/OFL.txt) */
+  @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap;
+    src: url(fonts/ibm-plex-sans-latin.woff2) format("woff2"); }
+  :root { --ink:#17202a; --body:#3b4654; --muted:#5d6877; --rule:#dfe5ec; --paper:#fff; --wash:#f4f7f5; --green:#1f7355; }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --ink:#e9eef3; --body:#c3ccd6; --muted:#9aa6b4; --rule:#2a3440; --paper:#11171d; --green:#4cbf92; }
+    :root:not([data-theme="light"]) { --ink:#e9eef3; --body:#c3ccd6; --muted:#9aa6b4; --rule:#2a3440; --paper:#11171d; --wash:#161e25; --green:#4cbf92; }
   }
+  * { box-sizing: border-box; }
   body { margin:0; background:var(--paper); color:var(--body); font:17px/1.65 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 56px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 8px 20px 56px; }
   a { color: var(--green); }
-  h1 { color: var(--ink); font-size: 32px; letter-spacing: -0.02em; margin: 24px 0 8px; }
-  h2 { color: var(--ink); font-size: 20px; margin: 32px 0 8px; }
-  p, li { margin: 0 0 12px; }
-  .back { font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 600; }
-  .back img { width: 26px; height: 26px; display: block; }
+  h1 { color: var(--ink); font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; margin: 32px 0 8px; text-wrap: balance; }
+  main h2 { color: var(--ink); font-size: 20px; margin: 32px 0 8px; }
+  main p, main li { margin: 0 0 12px; }
   .updated { color: var(--muted); font-size: 15px; }
+  /* Header and footer: the same on every page (site-pro, 15 Nov) */
+  header.top { border-bottom: 1px solid var(--rule); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; max-width: 980px; padding-top: 0; padding-bottom: 0; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; font-size: 18px; letter-spacing: -0.01em; }
+  .brand img { width: 32px; height: 32px; display: block; }
+  .brand span { display: flex; flex-direction: column; line-height: 1.15; }
+  .brand small { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .top nav a { font-size: 15px; display: inline-block; padding: 12px 6px; margin-left: 8px; }
+  @media (max-width: 360px) { .brand small { display: none; } }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  footer { border-top: 1px solid var(--rule); background: var(--wash); padding: 32px 0 40px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+  footer .wrap { max-width: 980px; padding-top: 0; padding-bottom: 0; }
+  .foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px 40px; }
+  .foot p { margin: 0 0 6px; }
+  .foot h2 { font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 8px; letter-spacing: 0; line-height: 1.4; }
+  .foot ul { list-style: none; margin: 0; padding: 0; }
+  .foot li { margin: 0; }
+  .foot li a { display: inline-block; padding: 3px 0; }
+  .foot .fb { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
+  .foot .fb img { width: 22px; height: 22px; }
+  .legal { grid-column: 1 / -1; border-top: 1px solid var(--rule); padding-top: 14px; font-size: 13px; }
+  @media (max-width: 760px) { .foot { grid-template-columns: 1fr 1fr; } .foot > div:first-child { grid-column: 1 / -1; } }
 </style>
 <!--gen:jsonld-->
 <script type="application/ld+json">
@@ -48,8 +84,13 @@
 <!--/gen:jsonld-->
 </head>
 <body>
-<div class="wrap">
-  <a class="back" href="/"><img src="logo.svg" alt="" width="26" height="26">Telos Group</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="logo.svg" alt="" width="32" height="32"><span>Telos Group<small>Finding your work in the noise</small></span></a>
+    <nav><a href="faq.html">FAQ</a><a href="mailto:mangoro@telosgroup.co.uk">Contact</a></nav>
+  </div>
+</header>
+<main class="wrap">
   <h1>Privacy and how we use your details</h1>
   <p class="updated">Last updated 15 November 2026</p>
 
@@ -84,7 +125,41 @@
 
   <h2>Our email and data providers</h2>
   <p>Emails are sent through IONOS and Google (Gmail). Contains public sector information licensed under the Open Government Licence v3.0.</p>
-</div>
+</main>
+<footer>
+<!-- FOR MARCUS: facts this footer (and privacy.html "Who we are") still needs. Nothing below is shown on the page.
+     Fill in only what is true and recorded; then add a visible line under "Telos Group" in the first column.
+     - Legal name and form: "Telos Group is a trading name of [your legal name]" (sole trader) or
+       "Telos Group Ltd, registered in England and Wales, company number [8 digits]" (limited company)
+     - Postal / registered address: [street, town, postcode] (a virtual office address is fine)
+     - ICO registration number: [ZA/ZB........] (ico.org.uk register)
+     - VAT number: [GB.........] only if and when VAT-registered
+     - Phone number: [optional; a mobile that goes to voicemail is fine] with hours, e.g. "evenings and Saturdays"
+     - A photo of you for the "Who's behind it" section, and a LinkedIn link if you are happy to share it
+     - Terms of use page (short): what the email is, that tender details come from public notices and should be
+       checked on the notice itself before bidding, and that we are not liable for missed deadlines -->
+  <div class="wrap foot">
+    <div>
+      <p class="fb"><img src="logo.svg" alt="" width="22" height="22">Telos Group</p>
+      <p>Finding your work in the noise. A Monday email of public contracts for small UK trades firms.</p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a></li>
+        <li><a href="/#about">Who's behind it</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Information</h2>
+      <ul>
+        <li><a href="faq.html">Questions</a></li>
+        <li><a href="privacy.html">Privacy and how we use your details</a></li>
+      </ul>
+    </div>
+    <p class="legal">© <!--gen:year-->2026<!--/gen:year--> Telos Group. Contains public sector information licensed under the Open Government Licence v3.0.</p>
+  </div>
+</footer>
 <script data-goatcounter="https://telosgroup.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

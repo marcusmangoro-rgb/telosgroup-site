@@ -6,22 +6,27 @@
 <title>Telos Group · Finding your work in the noise</title>
 <meta name="description" content="Public-sector tenders matched to your trade, area and contract size, sent every Monday morning.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://telosgroup.co.uk/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://telosgroup.co.uk/">
 <meta property="og:title" content="Telos Group · Finding your work in the noise">
 <meta property="og:description" content="Public-sector tenders matched to your trade, area and contract size, sent every Monday morning.">
-<meta property="og:image" content="https://telosgroup.co.uk/telos-video-poster.jpg">
-<meta property="og:image:width" content="1920">
-<meta property="og:image:height" content="1080">
+<meta property="og:site_name" content="Telos Group">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://telosgroup.co.uk/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Telos Group: public contracts that fit your firm, in your inbox every Monday.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11171d" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* IBM Plex Sans, served from this site (one variable file, weights 400 to 700, Latin; SIL OFL, fonts/OFL.txt) */
+  @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap;
+    src: url(fonts/ibm-plex-sans-latin.woff2) format("woff2"); }
   :root {
     --ink: #17202a;
     --body: #3b4654;
@@ -46,30 +51,13 @@
   a { color: var(--green); }
   a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
-  /* scroll animations (15 Nov): only when the script below turns them on; never with reduced motion; content is
-     fully visible without JavaScript */
-  .anim .rv { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
-  .anim .rv.pop { transform: scale(.6); }
-  .anim .rv.left { transform: translateX(-22px); }
-  .anim .rv.in { opacity: 1; transform: none; }
-  .anim .phone.rv { transform: translateY(40px) rotate(-1.5deg); transition-duration: .8s; }
-  .anim .phone.rv.in { transform: none; }
-  .ticker { background: #0f1317; color: #f2f5f7; font-size: 14px; line-height: 1; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #000; font-variant-numeric: tabular-nums; }
-  .ticker .run { display: inline-flex; animation: tick 38s linear infinite; }
-  .ticker span { padding: 10px 28px 10px 0; white-space: pre; }
-  .ticker:hover .run { animation-play-state: paused; }
-  @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) { .ticker .run { animation: none; } .ticker span + span { display: none; } .ticker span { padding-left: 16px; } }
-  /* ticker dressed as a market tape (15 Nov): the script below turns the plain line into items; without it the plain line shows */
-  .ticker { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .03em; -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
-  .ticker.tape span { padding: 0; display: inline-flex; align-items: center; }
-  .ticker .tk { display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; border-right: 1px solid #2b333b; font-style: normal; font-size: 12px; text-transform: uppercase; color: #aeb8c2; }
-  .ticker .tk b { color: #3ddc97; font-size: 14.5px; font-weight: 700; letter-spacing: 0; }
-  .ticker .tk .up { color: #3ddc97; font-size: 9px; transform: translateY(-1px); }
-  .ticker .tk.wk { color: #f2f5f7; font-weight: 600; }
-  .ticker .tk.wk::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #3ddc97; box-shadow: 0 0 0 0 rgba(61,220,151,.7); animation: pulse 2s ease-out infinite; }
-  @keyframes pulse { to { box-shadow: 0 0 0 7px rgba(61,220,151,0); } }
-  @media (prefers-reduced-motion: reduce) { .ticker .tk.wk::before { animation: none; } }
+  /* One moving moment only (site-pro, 15 Nov): the sample email fills in once when it comes into view. Turned on
+     by the script at the end; never with reduced motion; everything is visible without JavaScript. */
+  .anim .phone .em > *, .anim .phone .em-c > li { opacity: 0; transform: translateY(6px); transition: opacity .4s ease, transform .4s ease; transition-delay: var(--d, 0ms); }
+  .anim .phone.in .em > *, .anim .phone.in .em-c > li { opacity: 1; transform: none; }
+  /* This week's figures: a still line in the hero (was a scrolling tape above the header until 15 Nov) */
+  .week { margin: 22px 0 0; padding: 12px 0 0; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); max-width: 60ch; font-variant-numeric: tabular-nums; }
+  .week b { color: var(--ink); font-weight: 600; }
   header.top { border-bottom: 1px solid var(--rule); }
   header.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; font-size: 18px; }
@@ -105,7 +93,9 @@
   .stat .src { font-size: 13px; color: var(--muted); }
 
   .ai p { max-width: 46em; margin: 0 0 18px; }
-  .cta.secondary { background: transparent; color: var(--green); border: 1.5px solid var(--green); }
+  .about p { max-width: 60ch; margin: 0 0 14px; }
+  .about .cta { margin-top: 8px; }
+  .alt { font-size: 15px; margin: 14px 0 0; max-width: 60ch; }
 
   section { padding: 40px 0; border-top: 1px solid var(--rule); }
   h2 { font-size: 24px; color: var(--ink); margin: 0 0 20px; letter-spacing: -0.01em; }
@@ -121,8 +111,17 @@
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
   .two-col p { margin: 0 0 12px; }
 
-  footer { border-top: 1px solid var(--rule); padding: 24px 0 40px; font-size: 14px; color: var(--muted); }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  /* Footer: the same block on every page (site-pro, 15 Nov) */
+  footer { border-top: 1px solid var(--rule); background: var(--wash); padding: 32px 0 40px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+  .foot { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px 40px; }
+  .foot p { margin: 0 0 6px; }
+  .foot h2 { font-size: 14px; font-weight: 600; color: var(--ink); margin: 0 0 8px; letter-spacing: 0; line-height: 1.4; }
+  .foot ul { list-style: none; margin: 0; padding: 0; }
+  .foot li a { display: inline-block; padding: 3px 0; }
+  .foot .fb { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
+  .foot .fb img { width: 22px; height: 22px; }
+  .legal { grid-column: 1 / -1; border-top: 1px solid var(--rule); padding-top: 14px; font-size: 13px; }
+  @media (max-width: 760px) { .foot { grid-template-columns: 1fr 1fr; } .foot > div:first-child { grid-column: 1 / -1; } }
 
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding: 40px 0 28px; gap: 32px; }
@@ -142,7 +141,6 @@
   .flow li::after { left: calc(50% - 1px); bottom: -22px; height: 13px; background: var(--muted); }
   .flow li::before { left: calc(50% - 6px); bottom: -28px; border-width: 7px 6px 0; border-style: solid; border-color: var(--muted) transparent transparent; }
   .top .links a { display: inline-block; padding: 12px 6px; margin-left: 8px; }
-  footer a { display: inline-block; padding: 6px 0; }
   .two-col { row-gap: 36px; }
   .ai { padding-bottom: 56px; }
   section { padding: clamp(32px, 5vw, 48px) 0; }
@@ -243,7 +241,6 @@
 <!--/gen:jsonld-->
 </head>
 <body>
-<div class="ticker" role="status" aria-label="This week at Telos Group"><div class="run"><span><!--gen:ticker-->Week to 15 Nov  •  13 firms joined this week  •  42 new tenders in our trades this week  •  1,806 new contract awards recorded this week<!--/gen:ticker-->  •  </span><span aria-hidden="true"><!--gen:ticker-->Week to 15 Nov  •  13 firms joined this week  •  42 new tenders in our trades this week  •  1,806 new contract awards recorded this week<!--/gen:ticker-->  •  </span></div></div>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img src="logo.svg" alt="" width="32" height="32"><span>Telos Group<small>Finding your work in the noise</small></span></a>
@@ -256,14 +253,15 @@
     <div>
       <h1>Public contracts that fit your firm, in your inbox every Monday.</h1>
       <p class="lede">Public buyers post thousands of tenders a week, and most won't suit you. We find the ones that match your trade, your area and the size of job you go for.</p>
-      <a class="cta" href="mailto:mangoro@telosgroup.co.uk?subject=Send%20me%20my%20tender%20email">Get your tender email</a>
-      <p class="freq">It comes every Monday morning. If you'd rather have it daily or monthly, just ask.</p>
+      <a class="cta" href="mailto:mangoro@telosgroup.co.uk?subject=Monday%20tender%20email&amp;body=Hi%20Marcus%2C%0A%0APlease%20add%20me%20to%20the%20Monday%20email.%0A%0ATrade%3A%20%0AArea%20we%20cover%3A%20%0ASize%20of%20job%20we%20usually%20go%20for%3A%20%0A">Get your tender email</a>
+      <p class="alt">Or write to <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> with your trade and the area you cover. Marcus replies himself.</p>
       <p class="note">Already helping <!--gen:firm_count-->40+<!--/gen:firm_count--> firms across waste and recycling, cleaning, grounds, tree surgery and building maintenance.</p>
+      <p class="week"><!--gen:ticker-->Week to 15 Nov  •  13 firms joined this week  •  42 new tenders in our trades this week  •  1,806 new contract awards recorded this week<!--/gen:ticker--></p>
     </div>
 
     <ol class="flow" aria-label="How it works">
       <li><b>Buyers publish their tenders</b><span>Councils, schools, NHS trusts and housing associations across the UK advertise their work on the official tender portals.</span></li>
-      <li><b>AI-powered matching</b><span>A multi-factor scoring model rates every notice on trade, distance, contract size and buyer fit, and a language model screens out the false positives. Only the top-ranked make your list.</span></li>
+      <li><b>We sort them for you</b><span>We check every new notice against your trade, how far you travel and the size of job you take on, and set aside the ones that only look relevant.</span></li>
       <li><b>Your email lands on Monday</b><span>You get the few that suit you best, with the real deadline and a link to each one.</span></li>
       <li class="end"><b>You decide what to go for</b><span>Reply and tell us what's useful and what isn't, and we'll change what we send you.</span></li>
     </ol>
@@ -357,10 +355,10 @@
   <section>
     <h2>Trades we cover</h2>
     <ul class="trades">
-      <li>Commercial Cleaning</li><li>Grounds Maintenance</li><li>Tree Surgery</li>
-      <li>Scrap Metal and Recycling</li><li>Building Repairs and Maintenance</li>
-      <li>Skip Hire and Waste Collection</li><li>Gas and Heating Servicing</li><li>Washroom Hygiene</li>
-      <li>Specialist Cleaning</li><li>Void and House Clearances</li><li>Gritting and Hedge Cutting</li>
+      <li>Commercial cleaning</li><li>Grounds maintenance</li><li>Tree surgery</li>
+      <li>Scrap metal and recycling</li><li>Building repairs and maintenance</li>
+      <li>Skip hire and waste collection</li><li>Gas and heating servicing</li><li>Washroom hygiene</li>
+      <li>Specialist cleaning</li><li>Void and house clearances</li><li>Gritting and hedge cutting</li>
     </ul>
   </section>
 
@@ -399,25 +397,52 @@
         <p><b>Closing soon:</b> a reminder of matching tenders that close in the next 10 days, so nothing slips past.</p>
       </div>
       <div>
-        <h2>Who's behind it</h2>
-        <p>I'm Marcus. A lot of good public work goes to whoever happens to spot it, and most small firms don't have a bid team looking for it. I started Telos Group to do the looking for them.</p>
-        <p>To get on the list, email me at <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> with your trade and the area you cover, and I'll send you this week's tenders. I check every list myself before it goes out.</p>
+        <h2>Help with other admin</h2>
+        <p>AI can now take on some of the admin that eats a small firm's week, like turning site notes into quotes. If there's a job you'd happily hand over, <a href="mailto:mangoro@telosgroup.co.uk?subject=Help%20with%20admin">tell us about it</a> and we'll say honestly whether it can help.</p>
       </div>
     </div>
   </section>
 
-  <section class="ai">
-    <h2>Wondering what AI could do for your business?</h2>
-    <p>AI can now do some of the admin that eats a small firm's week, like turning site notes into quotes. If there's a job you'd happily hand over, email us and we'll tell you honestly whether it can help.</p>
-    <a class="cta secondary" href="mailto:mangoro@telosgroup.co.uk?subject=AI%20for%20my%20business">Get in touch</a>
+  <section class="about" id="about" aria-labelledby="about-h">
+    <h2 id="about-h">Who's behind it</h2>
+    <p>I'm Marcus. A lot of good public work goes to whoever happens to spot it, and most small firms don't have a bid team looking for it. I started Telos Group to do the looking for them.</p>
+    <p>To get on the list, email me at <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> with your trade and the area you cover, and I'll send you this week's tenders. I check every list myself before it goes out. If anything's off, or you'd rather not get them, just let me know.</p>
+    <a class="cta" href="mailto:mangoro@telosgroup.co.uk?subject=Monday%20tender%20email&amp;body=Hi%20Marcus%2C%0A%0APlease%20add%20me%20to%20the%20Monday%20email.%0A%0ATrade%3A%20%0AArea%20we%20cover%3A%20%0ASize%20of%20job%20we%20usually%20go%20for%3A%20%0A">Get your tender email</a>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© <!--gen:year-->2026<!--/gen:year--> Telos Group</span>
-    <span><a href="faq.html">FAQ</a> · <a href="privacy.html">Privacy and how we use your details</a></span>
-    <span>Contains public sector information licensed under the Open Government Licence v3.0.</span>
+<!-- FOR MARCUS: facts this footer (and privacy.html "Who we are") still needs. Nothing below is shown on the page.
+     Fill in only what is true and recorded; then add a visible line under "Telos Group" in the first column.
+     - Legal name and form: "Telos Group is a trading name of [your legal name]" (sole trader) or
+       "Telos Group Ltd, registered in England and Wales, company number [8 digits]" (limited company)
+     - Postal / registered address: [street, town, postcode] (a virtual office address is fine)
+     - ICO registration number: [ZA/ZB........] (ico.org.uk register)
+     - VAT number: [GB.........] only if and when VAT-registered
+     - Phone number: [optional; a mobile that goes to voicemail is fine] with hours, e.g. "evenings and Saturdays"
+     - A photo of you for the "Who's behind it" section, and a LinkedIn link if you are happy to share it
+     - Terms of use page (short): what the email is, that tender details come from public notices and should be
+       checked on the notice itself before bidding, and that we are not liable for missed deadlines -->
+  <div class="wrap foot">
+    <div>
+      <p class="fb"><img src="logo.svg" alt="" width="22" height="22">Telos Group</p>
+      <p>Finding your work in the noise. A Monday email of public contracts for small UK trades firms.</p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a></li>
+        <li><a href="/#about">Who's behind it</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Information</h2>
+      <ul>
+        <li><a href="faq.html">Questions</a></li>
+        <li><a href="privacy.html">Privacy and how we use your details</a></li>
+      </ul>
+    </div>
+    <p class="legal">© <!--gen:year-->2026<!--/gen:year--> Telos Group. Contains public sector information licensed under the Open Government Licence v3.0.</p>
   </div>
 </footer>
 <script data-goatcounter="https://telosgroup.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
@@ -484,77 +509,20 @@
 })();
 </script>
 <script>
-/* Scroll animations. Adds classes only; nothing is hidden unless this runs, and it does not run for visitors who
-   ask for reduced motion or whose browser lacks IntersectionObserver. */
+/* The one moving moment: when the sample phone first comes into view, its email fills in line by line, as it does
+   when it lands. Classes only; nothing is hidden unless this runs; off for reduced motion. */
 (function () {
-  if (!('IntersectionObserver' in window) || !window.matchMedia) return;
+  var phone = document.querySelector('.phone');
+  if (!phone || !('IntersectionObserver' in window) || !window.matchMedia) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var groups = [];
-  function add(sel, step, cls, each) {
-    var els = [].slice.call(document.querySelectorAll(sel));
-    els.forEach(function (e, i) {
-      e.classList.add('rv'); if (cls) e.classList.add(cls);
-      e.style.setProperty('--d', (each ? i * step : 0) + 'ms');
-    });
-    return els;
-  }
-  // how it works: the four steps arrive one after another
-  var flow = add('.flow li', 140, '', true);
-  if (flow.length) groups.push([flow[0].parentNode, flow]);
-  // the phone slides up, then the email fills in line by line, as it does when it lands
-  var phone = add('.phone', 0, '', false);
-  var lines = add('.phone .em > *, .phone .em-c > li', 0, '', false);
-  lines.forEach(function (e, i) { e.style.setProperty('--d', (350 + i * 110) + 'ms'); });
-  if (phone.length) groups.push([phone[0], phone.concat(lines)]);
-  // the map fills in tile by tile, north to south
-  var tiles = add('.tiles .tile', 55, 'pop', true);
-  if (tiles.length) groups.push([tiles[0].parentNode, tiles]);
-  // the three big figures slide in; section headings and trade chips rise
-  [].slice.call(document.querySelectorAll('.stat')).forEach(function (sec) {
-    var big = sec.querySelector('.big'), rest = sec.querySelector('.big + div');
-    if (!big) return;
-    big.classList.add('rv', 'left');
-    if (rest) { rest.classList.add('rv'); rest.style.setProperty('--d', '120ms'); }
-    groups.push([sec, rest ? [big, rest] : [big]]);
-  });
-  var chips = add('.trades li', 45, 'pop', true);
-  if (chips.length) groups.push([chips[0].parentNode, chips]);
-  [].slice.call(document.querySelectorAll('main section > h2, main section > div > h2')).forEach(function (h) {
-    if (h.closest('.stat') || h.classList.contains('rv')) return;
-    h.classList.add('rv'); groups.push([h, [h]]);
+  [].slice.call(phone.querySelectorAll('.em > *, .em-c > li')).forEach(function (e, i) {
+    e.style.setProperty('--d', (150 + i * 90) + 'ms');
   });
   document.documentElement.classList.add('anim');
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (!en.isIntersecting) return;
-      groups.forEach(function (g) { if (g[0] === en.target) g[1].forEach(function (e) { e.classList.add('in'); }); });
-      io.unobserve(en.target);
-    });
-  }, { threshold: 0.18, rootMargin: '0px 0px -6% 0px' });
-  groups.forEach(function (g) { io.observe(g[0]); });
-})();
-</script>
-<script>
-/* Ticker: turn the generated plain line ("Week to 15 Nov  •  13 firms joined this week  •  ...") into tape items.
-   The words and numbers are unchanged; only their dress. */
-(function () {
-  var bar = document.querySelector('.ticker'); if (!bar) return;
-  [].slice.call(bar.querySelectorAll('.run > span')).forEach(function (sp) {
-    var parts = sp.textContent.split('\u2022').map(function (t) { return t.trim(); }).filter(Boolean);
-    if (!parts.length) return;
-    sp.textContent = '';
-    parts.forEach(function (t) {
-      var i = document.createElement('i'); i.className = 'tk';
-      var m = /^([\d,]+)\s+(.*)$/.exec(t);
-      if (m) {
-        var up = document.createElement('em'); up.className = 'up'; up.textContent = '\u25B2'; up.setAttribute('aria-hidden', 'true');
-        var b = document.createElement('b'); b.textContent = m[1];
-        i.appendChild(up); i.appendChild(b); i.appendChild(document.createTextNode(m[2]));
-      } else { i.className = 'tk wk'; i.textContent = t; }
-      sp.appendChild(i);
-    });
-  });
-  bar.classList.add('tape');
+    entries.forEach(function (en) { if (en.isIntersecting) { phone.classList.add('in'); io.disconnect(); } });
+  }, { threshold: 0.3 });
+  io.observe(phone);
 })();
 </script>
 </body>
