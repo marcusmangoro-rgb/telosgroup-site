@@ -46,12 +46,30 @@
   a { color: var(--green); }
   a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  /* scroll animations (15 Nov): only when the script below turns them on; never with reduced motion; content is
+     fully visible without JavaScript */
+  .anim .rv { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); will-change: opacity, transform; }
+  .anim .rv.pop { transform: scale(.6); }
+  .anim .rv.left { transform: translateX(-22px); }
+  .anim .rv.in { opacity: 1; transform: none; }
+  .anim .phone.rv { transform: translateY(40px) rotate(-1.5deg); transition-duration: .8s; }
+  .anim .phone.rv.in { transform: none; }
   .ticker { background: #0f1317; color: #f2f5f7; font-size: 14px; line-height: 1; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #000; font-variant-numeric: tabular-nums; }
   .ticker .run { display: inline-flex; animation: tick 38s linear infinite; }
   .ticker span { padding: 10px 28px 10px 0; white-space: pre; }
   .ticker:hover .run { animation-play-state: paused; }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .ticker .run { animation: none; } .ticker span + span { display: none; } .ticker span { padding-left: 16px; } }
+  /* ticker dressed as a market tape (15 Nov): the script below turns the plain line into items; without it the plain line shows */
+  .ticker { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .03em; -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+  .ticker.tape span { padding: 0; display: inline-flex; align-items: center; }
+  .ticker .tk { display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; border-right: 1px solid #2b333b; font-style: normal; font-size: 12px; text-transform: uppercase; color: #aeb8c2; }
+  .ticker .tk b { color: #3ddc97; font-size: 14.5px; font-weight: 700; letter-spacing: 0; }
+  .ticker .tk .up { color: #3ddc97; font-size: 9px; transform: translateY(-1px); }
+  .ticker .tk.wk { color: #f2f5f7; font-weight: 600; }
+  .ticker .tk.wk::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #3ddc97; box-shadow: 0 0 0 0 rgba(61,220,151,.7); animation: pulse 2s ease-out infinite; }
+  @keyframes pulse { to { box-shadow: 0 0 0 7px rgba(61,220,151,0); } }
+  @media (prefers-reduced-motion: reduce) { .ticker .tk.wk::before { animation: none; } }
   header.top { border-bottom: 1px solid var(--rule); }
   header.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; font-size: 18px; }
@@ -143,13 +161,14 @@
 
   /* 15 Nov: sample Monday email in a phone, and 'how much is near you' (both filled by site_gen/home_extras.py) */
   .vh { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-  .sample { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px 56px; align-items: center; }
+  .sample { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px 64px; align-items: center; }
   .sample-copy p { margin: 0 0 14px; max-width: 46ch; }
   .sample-copy .hid { width: 3.2em; }
   .phone { width: 100%; max-width: 340px; margin: 0 auto; background: #1b232c; border: 1px solid #2f3a46; border-radius: 40px; padding: 10px 10px 14px; }
   .ph-bar { display: flex; justify-content: space-between; align-items: center; color: #e9eef3; font-size: 12px; font-weight: 600; padding: 2px 22px 8px; font-variant-numeric: tabular-nums; }
   .ph-notch { width: 76px; height: 20px; background: #05080a; border-radius: 12px; }
-  .em { background: #fff; color: #3d4757; border-radius: 30px; padding: 20px 18px 22px; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+  .em { background: #fff; color: #3d4757; border-radius: 30px; padding: 20px 18px 22px; max-height: 395px; overflow: hidden; position: relative; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+  .em::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; border-radius: 0 0 30px 30px; background: linear-gradient(rgba(255,255,255,0), #fff 85%); pointer-events: none; }
   .em p { margin: 0 0 10px; }
   .em-from { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .em-from b { color: #1a202c; }
@@ -462,6 +481,80 @@
   pc.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); lookup(true); } });
   tiles.forEach(function (b) { b.addEventListener('click', function () { region(b.getAttribute('data-r')); }); });
   pick.hidden = false;
+})();
+</script>
+<script>
+/* Scroll animations. Adds classes only; nothing is hidden unless this runs, and it does not run for visitors who
+   ask for reduced motion or whose browser lacks IntersectionObserver. */
+(function () {
+  if (!('IntersectionObserver' in window) || !window.matchMedia) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var groups = [];
+  function add(sel, step, cls, each) {
+    var els = [].slice.call(document.querySelectorAll(sel));
+    els.forEach(function (e, i) {
+      e.classList.add('rv'); if (cls) e.classList.add(cls);
+      e.style.setProperty('--d', (each ? i * step : 0) + 'ms');
+    });
+    return els;
+  }
+  // how it works: the four steps arrive one after another
+  var flow = add('.flow li', 140, '', true);
+  if (flow.length) groups.push([flow[0].parentNode, flow]);
+  // the phone slides up, then the email fills in line by line, as it does when it lands
+  var phone = add('.phone', 0, '', false);
+  var lines = add('.phone .em > *, .phone .em-c > li', 0, '', false);
+  lines.forEach(function (e, i) { e.style.setProperty('--d', (350 + i * 110) + 'ms'); });
+  if (phone.length) groups.push([phone[0], phone.concat(lines)]);
+  // the map fills in tile by tile, north to south
+  var tiles = add('.tiles .tile', 55, 'pop', true);
+  if (tiles.length) groups.push([tiles[0].parentNode, tiles]);
+  // the three big figures slide in; section headings and trade chips rise
+  [].slice.call(document.querySelectorAll('.stat')).forEach(function (sec) {
+    var big = sec.querySelector('.big'), rest = sec.querySelector('.big + div');
+    if (!big) return;
+    big.classList.add('rv', 'left');
+    if (rest) { rest.classList.add('rv'); rest.style.setProperty('--d', '120ms'); }
+    groups.push([sec, rest ? [big, rest] : [big]]);
+  });
+  var chips = add('.trades li', 45, 'pop', true);
+  if (chips.length) groups.push([chips[0].parentNode, chips]);
+  [].slice.call(document.querySelectorAll('main section > h2, main section > div > h2')).forEach(function (h) {
+    if (h.closest('.stat') || h.classList.contains('rv')) return;
+    h.classList.add('rv'); groups.push([h, [h]]);
+  });
+  document.documentElement.classList.add('anim');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      groups.forEach(function (g) { if (g[0] === en.target) g[1].forEach(function (e) { e.classList.add('in'); }); });
+      io.unobserve(en.target);
+    });
+  }, { threshold: 0.18, rootMargin: '0px 0px -6% 0px' });
+  groups.forEach(function (g) { io.observe(g[0]); });
+})();
+</script>
+<script>
+/* Ticker: turn the generated plain line ("Week to 15 Nov  •  13 firms joined this week  •  ...") into tape items.
+   The words and numbers are unchanged; only their dress. */
+(function () {
+  var bar = document.querySelector('.ticker'); if (!bar) return;
+  [].slice.call(bar.querySelectorAll('.run > span')).forEach(function (sp) {
+    var parts = sp.textContent.split('\u2022').map(function (t) { return t.trim(); }).filter(Boolean);
+    if (!parts.length) return;
+    sp.textContent = '';
+    parts.forEach(function (t) {
+      var i = document.createElement('i'); i.className = 'tk';
+      var m = /^([\d,]+)\s+(.*)$/.exec(t);
+      if (m) {
+        var up = document.createElement('em'); up.className = 'up'; up.textContent = '\u25B2'; up.setAttribute('aria-hidden', 'true');
+        var b = document.createElement('b'); b.textContent = m[1];
+        i.appendChild(up); i.appendChild(b); i.appendChild(document.createTextNode(m[2]));
+      } else { i.className = 'tk wk'; i.textContent = t; }
+      sp.appendChild(i);
+    });
+  });
+  bar.classList.add('tape');
 })();
 </script>
 </body>
