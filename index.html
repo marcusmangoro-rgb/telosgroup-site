@@ -7,6 +7,17 @@
 <meta name="description" content="Public-sector tenders matched to your trade, area and contract size, sent every Monday morning.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://telosgroup.co.uk/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://telosgroup.co.uk/">
+<meta property="og:title" content="Telos Group · Finding your work in the noise">
+<meta property="og:description" content="Public-sector tenders matched to your trade, area and contract size, sent every Monday morning.">
+<meta property="og:image" content="https://telosgroup.co.uk/telos-video-poster.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11171d" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -129,6 +140,72 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .cta:not(.secondary) { color: #0d1a14; }
   }
+
+  /* 15 Nov: sample Monday email in a phone, and 'how much is near you' (both filled by site_gen/home_extras.py) */
+  .vh { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .sample { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px 56px; align-items: center; }
+  .sample-copy p { margin: 0 0 14px; max-width: 46ch; }
+  .sample-copy .hid { width: 3.2em; }
+  .phone { width: 100%; max-width: 340px; margin: 0 auto; background: #1b232c; border: 1px solid #2f3a46; border-radius: 40px; padding: 10px 10px 14px; }
+  .ph-bar { display: flex; justify-content: space-between; align-items: center; color: #e9eef3; font-size: 12px; font-weight: 600; padding: 2px 22px 8px; font-variant-numeric: tabular-nums; }
+  .ph-notch { width: 76px; height: 20px; background: #05080a; border-radius: 12px; }
+  .em { background: #fff; color: #3d4757; border-radius: 30px; padding: 20px 18px 22px; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+  .em p { margin: 0 0 10px; }
+  .em-from { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .em-from b { color: #1a202c; }
+  .em-from span, .em-k, .em-small, .em-sig { color: #546072; }
+  .em-sub { color: #1a202c; font-weight: 700; font-size: 15px; line-height: 1.35; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; margin-bottom: 14px !important; }
+  .em-t { border-left: 3px solid #1f7355; padding: 1px 0 1px 11px; margin: 0 0 16px; }
+  .em-t p { margin: 0 0 2px; }
+  .em-th { color: #1a202c; font-weight: 700; line-height: 1.35; }
+  .em-tw { color: #1a202c; padding-bottom: 4px; }
+  .em-l { padding-top: 4px; }
+  .em-cu { color: #1a202c; font-weight: 700; margin: 4px 0 2px !important; }
+  .em-small, .em-sig { font-size: 13px; }
+  .em-c { list-style: none; margin: 0 0 12px; padding: 0; }
+  .em-c li { background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 9px 11px; margin: 0 0 8px; }
+  .em-c p { margin: 0 0 3px; }
+  .hid { display: inline-block; height: 0.78em; width: 5.5em; max-width: 100%; vertical-align: -0.04em; background: #c5ced8; border-radius: 3px; }
+  .nw { white-space: nowrap; }
+  .hid.w1 { width: 4.2em; } .hid.w3 { width: 9.5em; }
+
+  .area-intro { margin: 0 0 22px; max-width: 65ch; }
+  .area-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); grid-template-areas: "pick map" "result map"; gap: 20px 56px; align-items: start; }
+  .area-pick { grid-area: pick; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
+  .area-pick[hidden] { display: none; }
+  .area-pick label { font-size: 14px; color: var(--muted); font-weight: 500; }
+  .area-pick select, .area-pick input { display: block; width: 100%; margin-top: 4px; font: inherit; font-size: 16px; color: var(--ink); background: var(--paper); border: 1px solid var(--muted); border-radius: 6px; padding: 9px 10px; }
+  .area-pick select { -webkit-appearance: none; appearance: none; padding-right: 34px; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: right 17px center, right 11px center; background-size: 6px 6px; background-repeat: no-repeat; }
+  .area-pick input { width: 7.5em; text-transform: uppercase; }
+  .area-pick select:focus-visible, .area-pick input:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
+  .ap-pc { grid-column: 1 / -1; }
+  .ap-note { grid-column: 1 / -1; margin: -4px 0 0; font-size: 14px; color: var(--body); min-height: 1.4em; }
+  .area-map { grid-area: map; }
+  .tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+  .tile { -webkit-appearance: none; appearance: none; aspect-ratio: 1 / 1; min-width: 0; border: 0; border-radius: 6px; padding: 5px 6px; margin: 0; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; text-align: left; font: inherit; color: var(--ink); background: var(--wash); cursor: pointer; }
+  .tn { font-size: 11px; line-height: 1.15; font-weight: 500; overflow-wrap: anywhere; }
+  .tc { font-size: 17px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .tile.s0 { background: transparent; box-shadow: inset 0 0 0 1px var(--rule); color: var(--muted); }
+  .tile.s0 .tc { font-size: 12px; font-weight: 500; }
+  .tile.s1 { background: color-mix(in srgb, var(--green) 14%, var(--paper)); }
+  .tile.s2 { background: color-mix(in srgb, var(--green) 32%, var(--paper)); }
+  .tile.s3 { background: color-mix(in srgb, var(--green) 55%, var(--paper)); }
+  .tile.s4 { background: var(--green); color: var(--paper); }
+  .tile[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--ink); position: relative; }
+  .tile:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; position: relative; z-index: 1; }
+  .map-key { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  .area-result { grid-area: result; }
+  .ar-h { font-size: 17px; color: var(--ink); margin: 0 0 10px; }
+  .ar-n { margin: 0 0 8px; max-width: 46ch; }
+  .ar-n b { font-size: 30px; line-height: 1; color: var(--green); letter-spacing: -0.02em; margin-right: 4px; font-variant-numeric: tabular-nums; }
+  .ar-ex, .ar-few { font-size: 15px; color: var(--muted); margin: 12px 0 18px; max-width: 52ch; }
+  .area .src { font-size: 13px; color: var(--muted); margin: 22px 0 0; max-width: 65ch; }
+  @media (max-width: 760px) {
+    .sample { grid-template-columns: 1fr; }
+    .area-grid { grid-template-columns: 1fr; grid-template-areas: "pick" "map" "result"; gap: 20px; }
+    .tiles { max-width: 360px; }
+  }
+  @media (max-width: 420px) { .area-pick { grid-template-columns: 1fr; } }
 </style>
 <!--gen:jsonld-->
 <script type="application/ld+json">
@@ -172,6 +249,82 @@
       <li class="end"><b>You decide what to go for</b><span>Reply and tell us what's useful and what isn't, and we'll change what we send you.</span></li>
     </ol>
   </div>
+
+  <section class="sample" aria-labelledby="sample-h">
+    <div class="sample-copy">
+      <h2 id="sample-h">What lands in your inbox on Monday</h2>
+      <p>This one is built from a tender advertised this week and two contracts on our records, for <!--gen:sample_where-->cleaning in the South East<!--/gen:sample_where-->. It's set out the way your email sets them out.</p>
+      <p>The grey bars <span class="hid" aria-hidden="true"></span> are what we keep for the email itself: the buyer's name, the value, the deadline, who holds each contract now, the buyer's contact and the link to each notice. Here we show the quarter a contract ends; the email gives the month.</p>
+      <p>It arrives every Monday at <!--gen:send_time-->8:45am<!--/gen:send_time-->. Reply to it to change what you get.</p>
+    </div>
+    <div class="sample-phone"><!--gen:sample_email-->
+<div class="phone" role="img" aria-labelledby="em-cap">
+<div class="ph-bar" aria-hidden="true"><span>8:45</span><span class="ph-notch"></span><span></span></div>
+<div class="em" aria-hidden="true">
+<p class="em-from"><b>Marcus, Telos Group</b><span>8:45</span></p>
+<p class="em-sub">One cleaning tender in the South East this week</p>
+<p>Hi there,</p>
+<p>Here&#x27;s this week&#x27;s tender.</p>
+<div class="em-t">
+<p class="em-th">1. A council in Kent</p>
+<p class="em-tw">Office cleaning</p>
+<p><span class="em-k">Where:</span> Kent</p>
+<p><span class="em-k">Value:</span> <span class="hid w2"><span class="vh">value, hidden here</span></span></p>
+<p><span class="em-k">Deadline:</span> <span class="hid w1"><span class="vh">deadline, hidden here</span></span></p>
+<p class="em-l"><span class="hid w3"><span class="vh">link to the notice, hidden here</span></span></p>
+</div>
+<p class="em-cu">Coming up</p>
+<p class="em-small">These contracts end in the next 18 months. It's worth getting known to the buyer before they re-tender.</p>
+<ul class="em-c"><li><p class="em-th">A school or academy trust in Surrey or Sussex: school or college cleaning</p>
+<p>Held by <span class="nw"><span class="hid w3"><span class="vh">who holds it now, hidden here</span></span>.</span> Current term ends Oct to Dec 2026. Last contract £250k to £500k a year.</p>
+<p class="em-l"><span class="hid w3"><span class="vh">buyer contact and link, hidden here</span></span></p></li><li><p class="em-th">An NHS body in Hampshire or the Isle of Wight: building cleaning</p>
+<p>Held by <span class="nw"><span class="hid w3"><span class="vh">who holds it now, hidden here</span></span>.</span> Current term ends Jan to Mar 2027. Last contract under £25k a year.</p>
+<p class="em-l"><span class="hid w3"><span class="vh">buyer contact and link, hidden here</span></span></p></li></ul>
+<p class="em-sig">Marcus<br>Telos Group · Finding your work in the noise</p>
+</div>
+</div>
+<p class="vh" id="em-cap">A sample Monday email for cleaning in the South East. It lists one new tender: a council in Kent, office cleaning. It then lists 2 contracts coming up: a school or academy trust in Surrey or Sussex, school or college cleaning, current term ends Oct to Dec 2026; an NHS body in Hampshire or the Isle of Wight, building cleaning, current term ends Jan to Mar 2027. Buyer names, values, deadlines, current holders, contacts and links are hidden here and shown in the real email.</p>
+<!--/gen:sample_email--></div>
+  </section>
+
+  <section class="area" aria-labelledby="area-h">
+    <h2 id="area-h">How much work is there near you?</h2>
+    <p class="area-intro">See how many public contracts in your trade and region have a current term ending in the next <!--gen:window_months-->18<!--/gen:window_months--> months, and how many new tenders came out there recently.</p>
+    <div class="area-grid">
+      <div class="area-pick" hidden>
+        <label>Your trade<select id="ap-trade"><!--gen:area_trades--><option value="cleaning" selected>Cleaning</option><option value="grounds">Grounds maintenance</option><option value="trees">Tree surgery</option><option value="waste">Waste collection and skip hire</option><option value="building_maintenance">Building repairs and maintenance</option><!--/gen:area_trades--></select></label>
+        <label>Your region<select id="ap-region"><!--gen:area_regions--><option value="UKC">North East</option><option value="UKD">North West</option><option value="UKE">Yorkshire</option><option value="UKF">East Midlands</option><option value="UKG">West Midlands</option><option value="UKH">East of England</option><option value="UKI">London</option><option value="UKJ" selected>South East</option><option value="UKK">South West</option><option value="UKL">Wales</option><option value="UKM">Scotland</option><option value="UKN">Northern Ireland</option><!--/gen:area_regions--></select></label>
+        <label class="ap-pc">Or the start of your postcode<input id="ap-pc" type="text" inputmode="text" autocomplete="postal-code" maxlength="8" spellcheck="false" aria-describedby="ap-pc-note" placeholder="ME15"></label>
+        <p class="ap-note" id="ap-pc-note" aria-live="polite"></p>
+      </div>
+      <div class="area-map">
+        <div class="tiles" role="group" aria-label="Contracts ending, by region. Choose a square to pick that region."><!--gen:area_tiles-->
+<button type="button" class="tile s4" data-r="UKM" style="grid-area:1/3" aria-pressed="false" aria-label="Scotland: 62 contracts"><span class="tn">Scotland</span><span class="tc">62</span></button>
+<button type="button" class="tile s0" data-r="UKN" style="grid-area:2/1" aria-pressed="false" aria-label="Northern Ireland: too few to show"><span class="tn">N. Ireland</span><span class="tc">few</span></button>
+<button type="button" class="tile s2" data-r="UKC" style="grid-area:2/4" aria-pressed="false" aria-label="North East: 20 contracts"><span class="tn">North East</span><span class="tc">20</span></button>
+<button type="button" class="tile s3" data-r="UKD" style="grid-area:3/3" aria-pressed="false" aria-label="North West: 46 contracts"><span class="tn">North West</span><span class="tc">46</span></button>
+<button type="button" class="tile s3" data-r="UKE" style="grid-area:3/4" aria-pressed="false" aria-label="Yorkshire: 36 contracts"><span class="tn">Yorkshire</span><span class="tc">36</span></button>
+<button type="button" class="tile s1" data-r="UKL" style="grid-area:4/2" aria-pressed="false" aria-label="Wales: 10 contracts"><span class="tn">Wales</span><span class="tc">10</span></button>
+<button type="button" class="tile s4" data-r="UKG" style="grid-area:4/3" aria-pressed="false" aria-label="West Midlands: 56 contracts"><span class="tn">W. Midlands</span><span class="tc">56</span></button>
+<button type="button" class="tile s2" data-r="UKF" style="grid-area:4/4" aria-pressed="false" aria-label="East Midlands: 27 contracts"><span class="tn">E. Midlands</span><span class="tc">27</span></button>
+<button type="button" class="tile s4" data-r="UKH" style="grid-area:4/5" aria-pressed="false" aria-label="East of England: 64 contracts"><span class="tn">East</span><span class="tc">64</span></button>
+<button type="button" class="tile s4" data-r="UKK" style="grid-area:5/2" aria-pressed="false" aria-label="South West: 69 contracts"><span class="tn">South West</span><span class="tc">69</span></button>
+<button type="button" class="tile s4" data-r="UKJ" style="grid-area:5/3" aria-pressed="true" aria-label="South East: 70 contracts"><span class="tn">South East</span><span class="tc">70</span></button>
+<button type="button" class="tile s4" data-r="UKI" style="grid-area:5/4" aria-pressed="false" aria-label="London: 67 contracts"><span class="tn">London</span><span class="tc">67</span></button>
+<!--/gen:area_tiles--></div>
+        <p class="map-key">The stronger the green, the more contracts are ending there. "few" means too few to give a fair count.</p>
+      </div>
+      <div class="area-result" id="ap-result" aria-live="polite"><!--gen:area_result-->
+<h3 class="ar-h">Cleaning in the South East</h3>
+<p class="ar-n"><b>70</b> cleaning contracts here have a current term ending in the next 18 months.</p>
+<p class="ar-n"><b>12</b> new cleaning tenders were advertised here in the last 90 days.</p>
+<p class="ar-ex">One of the contracts: a school or academy trust in Surrey or Sussex, school or college cleaning, £250k to £500k a year, current term ends Oct to Dec 2026.</p>
+<a class="cta" id="ar-cta" href="mailto:mangoro@telosgroup.co.uk?subject=Monday%20email%3A%20Cleaning%2C%20South%20East&amp;body=Hi%20Marcus%2C%0A%0APlease%20add%20me%20to%20the%20Monday%20email.%0A%0ATrade%3A%20Cleaning%0AArea%20we%20cover%3A%20%0ASize%20of%20job%20we%20usually%20go%20for%3A%20%0A">Get your tender email for cleaning in the South East</a>
+<!--/gen:area_result--></div>
+    </div>
+    <p class="src">Counts from published public contract records, as of <!--gen:area_asof-->15 November 2026<!--/gen:area_asof-->. Each contract is counted once. Examples are described, not named, and values are shown in bands.</p>
+    <script type="application/json" id="area-data"><!--gen:area_data-->{"m":18,"l":90,"c":"mangoro@telosgroup.co.uk","t":{"cleaning":["Cleaning","cleaning contracts"],"grounds":["Grounds maintenance","grounds maintenance contracts"],"trees":["Tree surgery","tree surgery and tree work contracts"],"waste":["Waste collection and skip hire","waste collection and skip hire contracts"],"metal":["Scrap metal and recycling","scrap metal and recycling contracts"],"building_maintenance":["Building repairs and maintenance","building repairs and maintenance contracts"]},"r":{"UKC":["North East","the North East"],"UKD":["North West","the North West"],"UKE":["Yorkshire","Yorkshire and the Humber"],"UKF":["East Midlands","the East Midlands"],"UKG":["West Midlands","the West Midlands"],"UKH":["East of England","the East of England"],"UKI":["London","London"],"UKJ":["South East","the South East"],"UKK":["South West","the South West"],"UKL":["Wales","Wales"],"UKM":["Scotland","Scotland"],"UKN":["Northern Ireland","Northern Ireland"]},"pc":{"AB":["UKM"],"AL":["UKH"],"B":["UKG"],"BA":["UKK"],"BB":["UKD"],"BD":["UKE"],"BH":["UKK"],"BL":["UKD"],"BN":["UKJ"],"BR":["UKI"],"BS":["UKK"],"BT":["UKN"],"CA":["UKD"],"CB":["UKH"],"CF":["UKL"],"CH":["UKD","UKL"],"CM":["UKH"],"CO":["UKH"],"CR":["UKI"],"CT":["UKJ"],"CV":["UKG"],"CW":["UKD"],"DA":["UKJ","UKI"],"DD":["UKM"],"DE":["UKF"],"DG":["UKM"],"DH":["UKC"],"DL":["UKC","UKE"],"DN":["UKE"],"DT":["UKK"],"DY":["UKG"],"E":["UKI"],"EC":["UKI"],"EH":["UKM"],"EN":["UKI","UKH"],"EX":["UKK"],"FK":["UKM"],"FY":["UKD"],"G":["UKM"],"GL":["UKK"],"GU":["UKJ"],"HA":["UKI"],"HD":["UKE"],"HG":["UKE"],"HP":["UKJ","UKH"],"HR":["UKG"],"HS":["UKM"],"HU":["UKE"],"HX":["UKE"],"IG":["UKI","UKH"],"IP":["UKH"],"IV":["UKM"],"KA":["UKM"],"KT":["UKJ","UKI"],"KW":["UKM"],"KY":["UKM"],"L":["UKD"],"LA":["UKD"],"LD":["UKL"],"LE":["UKF"],"LL":["UKL"],"LN":["UKF"],"LS":["UKE"],"LU":["UKH"],"M":["UKD"],"ME":["UKJ"],"MK":["UKJ","UKH"],"ML":["UKM"],"N":["UKI"],"NE":["UKC"],"NG":["UKF"],"NN":["UKF"],"NP":["UKL"],"NR":["UKH"],"NW":["UKI"],"OL":["UKD"],"OX":["UKJ"],"PA":["UKM"],"PE":["UKH","UKF"],"PH":["UKM"],"PL":["UKK"],"PO":["UKJ"],"PR":["UKD"],"RG":["UKJ"],"RH":["UKJ"],"RM":["UKI","UKH"],"S":["UKE","UKF"],"SA":["UKL"],"SE":["UKI"],"SG":["UKH"],"SK":["UKD"],"SL":["UKJ"],"SM":["UKI"],"SN":["UKK"],"SO":["UKJ"],"SP":["UKK","UKJ"],"SR":["UKC"],"SS":["UKH"],"ST":["UKG"],"SW":["UKI"],"SY":["UKG","UKL"],"TA":["UKK"],"TD":["UKM"],"TF":["UKG"],"TN":["UKJ"],"TQ":["UKK"],"TR":["UKK"],"TS":["UKC"],"TW":["UKI","UKJ"],"UB":["UKI"],"W":["UKI"],"WA":["UKD"],"WC":["UKI"],"WD":["UKH"],"WF":["UKE"],"WN":["UKD"],"WR":["UKG"],"WS":["UKG"],"WV":["UKG"],"YO":["UKE"],"ZE":["UKM"]},"d":{"cleaning":{"UKC":[20,3,["A housing association","County Durham or Teesside","washroom services","under £25k","a year","Oct to Dec 2026"]],"UKD":[46,8,["A council","Lancashire","building cleaning","£50k to £100k","for the whole contract","Oct to Dec 2026"]],"UKE":[36,null,["A housing association","East Yorkshire or North Lincolnshire","building cleaning","£50k to £100k","a year","Oct to Dec 2026"]],"UKF":[27,9,["A council","Leicestershire, Rutland or Northamptonshire","building cleaning","£250k to £500k","a year","Jan to Mar 2027"]],"UKG":[56,9,["A school or academy trust","Herefordshire, Worcestershire or Warwickshire","school or college cleaning","£100k to £250k","a year","Oct to Dec 2026"]],"UKH":[64,9,["A council","Bedfordshire or Hertfordshire","office cleaning","£250k to £500k","a year","Oct to Dec 2026"]],"UKI":[67,6,["An NHS body","outer London","building cleaning","£50k to £100k","for the whole contract","Oct to Dec 2026"]],"UKJ":[70,12,["A school or academy trust","Surrey or Sussex","school or college cleaning","£250k to £500k","a year","Oct to Dec 2026"]],"UKK":[69,6,["A council","Devon","office cleaning","under £25k","a year","Oct to Dec 2026"]],"UKL":[10,7,["An NHS body","East Wales","building cleaning","£100k to £250k","for the whole contract","Jan to Mar 2027"]],"UKM":[62,13,["A housing association","West Central Scotland","building cleaning","£50k to £100k","a year","Oct to Dec 2026"]],"UKN":[null,null,null]},"grounds":{"UKC":[12,3,["A council","Northumberland or Tyne and Wear","weed control","£100k to £250k","a year","Jan to Mar 2027"]],"UKD":[40,6,["A council","Lancashire","grass cutting","£100k to £250k","a year","Oct to Dec 2026"]],"UKE":[48,null,["A council","West Yorkshire","grounds maintenance","£100k to £250k","a year","Oct to Dec 2026"]],"UKF":[33,5,["A council","Derbyshire or Nottinghamshire","weed control","£50k to £100k","a year","Oct to Dec 2026"]],"UKG":[20,null,["A police or fire service","Shropshire or Staffordshire","grounds maintenance","£100k to £250k","a year","Jan to Mar 2027"]],"UKH":[47,5,["A housing association","Bedfordshire or Hertfordshire","grounds maintenance","£100k to £250k","a year","Oct to Dec 2026"]],"UKI":[20,null,["A council","inner London","grounds maintenance","£50k to £100k","a year","Jan to Mar 2027"]],"UKJ":[53,7,["A town or parish council","Surrey or Sussex","grounds maintenance","under £25k","a year","Oct to Dec 2026"]],"UKK":[30,null,["A town or parish council","Cornwall","grass cutting","under £25k","a year","Jan to Mar 2027"]],"UKL":[8,null,["A council","West Wales or the Valleys","weed control","under £25k","for the whole contract","Oct to Dec 2026"]],"UKM":[60,8,["A housing association","West Central Scotland","grounds maintenance","£100k to £250k","a year","Oct to Dec 2026"]],"UKN":[null,null,null]},"trees":{"UKC":[null,null,null],"UKD":[14,null,["A council","Lancashire","arboricultural services","£25k to £50k","a year","Jan to Mar 2027"]],"UKE":[null,null,null],"UKF":[null,null,null],"UKG":[11,null,["A council","Herefordshire, Worcestershire or Warwickshire","tree works","£25k to £50k","for the whole contract","Oct to Dec 2026"]],"UKH":[5,4,["A town or parish council","Bedfordshire or Hertfordshire","tree works","under £25k","a year","Jan to Mar 2028"]],"UKI":[16,null,["A council","inner London","arboricultural services","under £25k","for the whole contract","Oct to Dec 2026"]],"UKJ":[21,null,["A council","Hampshire or the Isle of Wight","tree works","£100k to £250k","for the whole contract","Oct to Dec 2026"]],"UKK":[6,null,["A town or parish council","Gloucestershire, Wiltshire or the Bristol area","tree works","under £25k","a year","Apr to Jun 2027"]],"UKL":[null,null,null],"UKM":[null,null,null],"UKN":[null,null,null]},"waste":{"UKC":[6,null,["A college or university","Northumberland or Tyne and Wear","waste collection","£250k to £500k","a year","Apr to Jun 2027"]],"UKD":[20,null,["A college or university","Cheshire","waste collection","£25k to £50k","a year","Oct to Dec 2026"]],"UKE":[12,3,["A council","West Yorkshire","skip hire","£25k to £50k","a year","Jul to Sep 2027"]],"UKF":[12,null,["A council","Leicestershire, Rutland or Northamptonshire","waste and recycling collection","£250k to £500k","a year","Jan to Mar 2027"]],"UKG":[12,null,["A police or fire service","the Birmingham and Black Country area","skip hire","under £25k","a year","Oct to Dec 2026"]],"UKH":[12,null,["An NHS body","Bedfordshire or Hertfordshire","green waste collection","£25k to £50k","a year","Oct to Dec 2026"]],"UKI":[9,null,["A public agency","inner London","waste collection","£50k to £100k","for the whole contract","Jan to Mar 2027"]],"UKJ":[22,null,["A council","Berkshire, Buckinghamshire or Oxfordshire","waste collection","£100k to £250k","a year","Jan to Mar 2027"]],"UKK":[11,null,["A college or university","Gloucestershire, Wiltshire or the Bristol area","waste collection","under £25k","a year","Oct to Dec 2026"]],"UKL":[null,null,null],"UKM":[null,null,null],"UKN":[null,null,null]},"metal":{"UKC":[null,null,null],"UKD":[null,null,null],"UKE":[null,null,null],"UKF":[null,null,null],"UKG":[null,null,null],"UKH":[null,null,null],"UKI":[null,null,null],"UKJ":[null,null,null],"UKK":[null,null,null],"UKL":[null,null,null],"UKM":[null,null,null],"UKN":[null,null,null]},"building_maintenance":{"UKC":[16,5,["A council","County Durham or Teesside","painting and decorating","£250k to £500k","a year","Jan to Mar 2027"]],"UKD":[17,6,["A council","Cumbria","building repairs","£50k to £100k","for the whole contract","Jan to Mar 2027"]],"UKE":[21,5,["A housing association","South Yorkshire","responsive repairs","£500k to £1m","a year","Oct to Dec 2026"]],"UKF":[31,null,["A housing association","Leicestershire, Rutland or Northamptonshire","building repairs","£50k to £100k","a year","Oct to Dec 2026"]],"UKG":[19,null,["A council","the Birmingham and Black Country area","void property works","£250k to £500k","for the whole contract","Jan to Mar 2027"]],"UKH":[23,6,["An NHS body","Bedfordshire or Hertfordshire","painting and decorating","under £25k","for the whole contract","Oct to Dec 2026"]],"UKI":[44,null,["A council","outer London","void property works","£100k to £250k","a year","Jan to Mar 2027"]],"UKJ":[55,7,["A housing association","Kent","painting and decorating","over £1m","for the whole contract","Oct to Dec 2026"]],"UKK":[28,null,["An NHS body","Gloucestershire, Wiltshire or the Bristol area","minor works","under £25k","for the whole contract","Oct to Dec 2026"]],"UKL":[7,5,["A housing association","West Wales or the Valleys","void property works","£250k to £500k","a year","Oct to Dec 2026"]],"UKM":[123,7,["A college or university","West Central Scotland","minor works","under £25k","a year","Oct to Dec 2026"]],"UKN":[null,null,null]}}}<!--/gen:area_data--></script>
+  </section>
 
 
   <section class="video">
@@ -249,5 +402,67 @@
   </div>
 </footer>
 <script data-goatcounter="https://telosgroup.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+/* 'How much work is there near you?': reads the counts in #area-data (written by site_gen/home_extras.py).
+   No requests, no storage. Without JavaScript the page shows the default trade and region. */
+(function () {
+  var el = document.getElementById('area-data');
+  if (!el || !window.JSON) return;
+  var D;
+  try { D = JSON.parse(el.textContent.replace(/<!--[\s\S]*?-->/g, '')); } catch (e) { return; }
+  if (!D.d) return;
+  var pick = document.querySelector('.area-pick'), ts = document.getElementById('ap-trade'),
+      rs = document.getElementById('ap-region'), pc = document.getElementById('ap-pc'),
+      note = document.getElementById('ap-pc-note'), out = document.getElementById('ap-result'),
+      tiles = [].slice.call(document.querySelectorAll('.tile')), typed = '';
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  function fmt(n) { return n.toLocaleString('en-GB'); }
+  function lf(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
+  function mail(t, r) {
+    var T = D.t[t][0], body = 'Hi Marcus,\n\nPlease add me to the Monday email.\n\nTrade: ' + T + '\nArea we cover: ' + typed +
+      '\nSize of job we usually go for: \n';
+    return 'mailto:' + D.c + '?subject=' + encodeURIComponent('Monday email: ' + T + ', ' + D.r[r][0]) + '&body=' + encodeURIComponent(body);
+  }
+  function render() {
+    var t = ts.value, r = rs.value, d = D.d[t][r], T = D.t[t], tl = T[0].toLowerCase(), R = D.r[r][1];
+    var h = '<h3 class="ar-h">' + esc(T[0]) + ' in ' + esc(R) + '</h3>';
+    if (d[0]) h += '<p class="ar-n"><b>' + fmt(d[0]) + '</b> ' + esc(T[1]) + ' here have a current term ending in the next ' + D.m + ' months.</p>';
+    if (d[1]) h += '<p class="ar-n"><b>' + fmt(d[1]) + '</b> new ' + esc(tl) + ' tenders were advertised here in the last ' + D.l + ' days.</p>';
+    if (!d[0] && !d[1]) h += '<p class="ar-few">We hold too few ' + esc(T[1]) + " here to show a fair count. Email us with your town and we'll check the area around you.</p>";
+    var x = d[2];
+    if (x) h += '<p class="ar-ex">One of the contracts: ' + esc(lf(x[0])) + ' in ' + esc(x[1]) + ', ' + esc(x[2]) + ', ' + esc(x[3]) + ' ' + esc(x[4]) + ', current term ends ' + esc(x[5]) + '.</p>';
+    h += '<a class="cta" id="ar-cta" href="' + esc(mail(t, r)) + '">Get your tender email for ' + esc(tl) + ' in ' + esc(R) + '</a>';
+    out.innerHTML = h;
+    var top = 0, k;
+    for (k in D.d[t]) top = Math.max(top, D.d[t][k][0] || 0);
+    tiles.forEach(function (b) {
+      var k = b.getAttribute('data-r'), n = D.d[t][k] ? D.d[t][k][0] : null, f = n / top;
+      b.className = 'tile ' + (!n ? 's0' : f < 0.25 ? 's1' : f < 0.5 ? 's2' : f < 0.75 ? 's3' : 's4');
+      b.querySelector('.tc').textContent = n ? fmt(n) : 'few';
+      b.setAttribute('aria-label', D.r[k][0] + ': ' + (n ? fmt(n) + ' contracts' : 'too few to show'));
+      b.setAttribute('aria-pressed', k === r ? 'true' : 'false');
+    });
+  }
+  function region(r) { typed = ''; note.textContent = ''; rs.value = r; render(); }
+  function lookup(final) {
+    var v = pc.value.toUpperCase().replace(/\s+/g, ' ').trim(), m = v.match(/^([A-Z]{1,2})(\d|$|\s)/);
+    if (!v) { note.textContent = ''; return; }
+    if (!m || (!final && !/\d/.test(v))) { if (final) note.textContent = "That doesn't look like a postcode. Try the first part, like ME15, or pick your region."; return; }
+    var rr = D.pc[m[1]];
+    if (!rr) { note.textContent = "We don't know the postcode area " + m[1] + '. Pick your region from the list instead.'; return; }
+    typed = v; rs.value = rr[0]; render();
+    note.textContent = rr.length > 1
+      ? m[1] + ' covers ' + rr.map(function (x) { return D.r[x][1]; }).join(' and ') + '. Showing ' + D.r[rr[0]][1] + '; pick the other region above if that suits you better.'
+      : m[1] + ' is in ' + D.r[rr[0]][1] + '.';
+  }
+  ts.addEventListener('change', render);
+  rs.addEventListener('change', function () { region(rs.value); });
+  pc.addEventListener('input', function () { lookup(false); });
+  pc.addEventListener('change', function () { lookup(true); });
+  pc.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); lookup(true); } });
+  tiles.forEach(function (b) { b.addEventListener('click', function () { region(b.getAttribute('data-r')); }); });
+  pick.hidden = false;
+})();
+</script>
 </body>
 </html>
