@@ -438,19 +438,19 @@
   function fmt(n) { return n.toLocaleString('en-GB'); }
   function lf(s) { return s.charAt(0).toLowerCase() + s.slice(1); }
   function mail(t, r) {
-    var T = D.t[t][0], body = 'Hi Marcus,\n\nPlease add me to the Monday email.\n\nTrade: ' + T + '\nArea we cover: ' + typed +
+    var T = t === 'all' ? '' : D.t[t][0], body = 'Hi Marcus,\n\nPlease add me to the Monday email.\n\nTrade: ' + T + '\nArea we cover: ' + typed +
       '\nSize of job we usually go for: \n';
-    return 'mailto:' + D.c + '?subject=' + encodeURIComponent('Monday email: ' + T + ', ' + D.r[r][0]) + '&body=' + encodeURIComponent(body);
+    return 'mailto:' + D.c + '?subject=' + encodeURIComponent('Monday email: ' + (T ? T + ', ' : '') + D.r[r][0]) + '&body=' + encodeURIComponent(body);
   }
   function render() {
-    var t = ts.value, r = rs.value, d = D.d[t][r], T = D.t[t], tl = T[0].toLowerCase(), R = D.r[r][1];
+    var t = ts.value, r = rs.value, d = D.d[t][r], T = D.t[t], R = D.r[r][1];
     var h = '<h3 class="ar-h">' + esc(T[0]) + ' in ' + esc(R) + '</h3>';
     if (d[0]) h += '<p class="ar-n"><b>' + fmt(d[0]) + '</b> ' + esc(T[1]) + ' here have a current term ending in the next ' + D.m + ' months.</p>';
-    if (d[1]) h += '<p class="ar-n"><b>' + fmt(d[1]) + '</b> new ' + esc(tl) + ' tenders were advertised here in the last ' + D.l + ' days.</p>';
+    if (d[1]) h += '<p class="ar-n"><b>' + fmt(d[1]) + '</b> new ' + (T[2] ? esc(T[2]) + ' ' : '') + 'tenders were advertised here in the last ' + D.l + ' days.</p>';
     if (!d[0] && !d[1]) h += '<p class="ar-few">We hold too few ' + esc(T[1]) + " here to show a fair count. Email us with your town and we'll check the area around you.</p>";
     var x = d[2];
     if (x) h += '<p class="ar-ex">One of the contracts: ' + esc(lf(x[0])) + ' in ' + esc(x[1]) + ', ' + esc(x[2]) + ', ' + esc(x[3]) + ' ' + esc(x[4]) + ', current term ends ' + esc(x[5]) + '.</p>';
-    h += '<a class="cta" id="ar-cta" href="' + esc(mail(t, r)) + '">Get your tender email for ' + esc(tl) + ' in ' + esc(R) + '</a>';
+    h += '<a class="cta" id="ar-cta" href="' + esc(mail(t, r)) + '">Get your tender email for ' + esc(T[3]) + ' in ' + esc(R) + '</a>';
     out.innerHTML = h;
     var top = 0, k;
     for (k in D.d[t]) top = Math.max(top, D.d[t][k][0] || 0);
