@@ -1,0 +1,40 @@
+# Telos Group
+
+> Telos Group (telosgroup.co.uk) sends small UK trades firms a Monday email listing public tenders that fit their trade, their area and the size of job they go for, plus contracts near them that are ending soon.
+
+## Who we are
+
+Telos Group is a small business run by Marcus Mangoro. Its tagline is "Finding your work in the noise". We are already helping <!--gen:firm_count-->40+<!--/gen:firm_count--> firms across waste and recycling, cleaning, grounds, tree surgery and building maintenance.
+
+## The Monday email
+
+The email arrives every Monday morning. Firms can ask for it daily or monthly instead. Each email lists the open tenders that best match the firm, with the real deadline and a link to each one. For two-stage tenders it shows the first deadline, the request to take part. It also includes:
+
+- Coming up: a contract near the firm whose current term ends in the next 18 months, and who holds it now.
+- Closing soon: a reminder of matching tenders that close in the next 10 days.
+
+Every new notice is checked against the firm's trade, how far it will travel and its usual contract size, then scored for fit. AI reads each notice to weed out ones that only look relevant. Marcus checks every list before it is sent. Firms reply to say what is useful, and the list changes to match.
+
+## Trades and areas
+
+Trades: commercial and specialist cleaning, washroom hygiene, grounds maintenance, tree surgery, gritting and hedge cutting, skip hire and waste collection, scrap metal and recycling, void and house clearances, gas and heating servicing, and building repairs and maintenance.
+
+Areas: anywhere in the UK. Open tenders come from Find a Tender and Contracts Finder; Find a Tender also carries the larger tenders from Scotland, Wales and Northern Ireland. To see when existing contracts end, we use published award records from those sites, Public Contracts Scotland, Sell2Wales and councils' own contract registers. Smaller tenders advertised only on the Scottish, Welsh or Northern Irish tender sites may not reach us yet. We do not read Northern Ireland's own site, eTendersNI, so there we only see the contracts that also appear on Find a Tender or Contracts Finder.
+
+## Most small contracts were not advertised on Find a Tender
+
+We looked at 1,427 contracts awarded in these trades from January to October 2026. Of the 659 worth under £140k, about 8 in 10 had no tender notice on Find a Tender. They only showed up once the work had been awarded.
+
+Source: Telos Group analysis of Find a Tender award and tender notices, January to October 2026. Some of these contracts may have been advertised on Contracts Finder or elsewhere, so treat the figure as an estimate. Under £140k means below the central government services threshold of £139,688.
+
+## How a firm asks to be added
+
+Email mangoro@telosgroup.co.uk with your trade and the area you cover. Marcus replies himself.
+
+## Pages
+
+- [Home](https://telosgroup.co.uk/)
+- [FAQ](https://telosgroup.co.uk/faq.html)
+- [Privacy and how we use your details](https://telosgroup.co.uk/privacy.html)
+
+Tender data: public sector information licensed under the Open Government Licence v3.0.

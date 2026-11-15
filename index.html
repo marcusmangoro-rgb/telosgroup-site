@@ -123,6 +123,21 @@
     :root:not([data-theme="light"]) .cta:not(.secondary) { color: #0d1a14; }
   }
 </style>
+<!--gen:jsonld-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Telos Group",
+ "url": "https://telosgroup.co.uk/",
+ "logo": "https://telosgroup.co.uk/logo.svg",
+ "email": "mangoro@telosgroup.co.uk",
+ "slogan": "Finding your work in the noise",
+ "areaServed": "GB",
+ "description": "A Monday email to small UK trades firms listing public tenders, and contracts coming up for renewal, that fit their trade, area and size of job."
+}
+</script>
+<!--/gen:jsonld-->
 </head>
 <body>
 <header class="top">
@@ -139,11 +154,11 @@
       <p class="lede">Public buyers post thousands of tenders a week, and most won't suit you. We find the ones that match your trade, your area and the size of job you go for.</p>
       <a class="cta" href="mailto:mangoro@telosgroup.co.uk?subject=Send%20me%20my%20tender%20email">Get your tender email</a>
       <p class="freq">It comes every Monday morning. If you'd rather have it daily or monthly, just ask.</p>
-      <p class="note">Already helping 20+ firms across cleaning, grounds and building maintenance.</p>
+      <p class="note">Already helping <!--gen:firm_count-->40+<!--/gen:firm_count--> firms across waste and recycling, cleaning, grounds, tree surgery and building maintenance.</p>
     </div>
 
     <ol class="flow" aria-label="How it works">
-      <li><b>Buyers publish their tenders</b><span>Public buyers in England post thousands of tenders a week on Find a Tender and Contracts Finder.</span></li>
+      <li><b>Buyers publish their tenders</b><span>Public buyers across the UK post thousands of tenders a week. We read the new notices on Find a Tender and Contracts Finder.</span></li>
       <li><b>AI-powered matching</b><span>A multi-factor scoring model rates every notice on trade, distance, contract size and buyer fit, and a language model screens out the false positives. Only the top-ranked make your list.</span></li>
       <li><b>Your email lands on Monday</b><span>You get the few that suit you best, with the real deadline and a link to each one.</span></li>
       <li class="end"><b>You decide what to go for</b><span>Reply and tell us what's useful and what isn't, and we'll change what we send you.</span></li>
@@ -153,7 +168,7 @@
 
   <section class="video">
     <h2>See it in 20 seconds</h2>
-    <video controls playsinline preload="metadata" poster="telos-video-poster.jpg" width="1920" height="1080">
+    <video controls playsinline preload="none" poster="telos-video-poster.jpg" width="1920" height="1080">
       <source src="telos-video.mp4" type="video/mp4">
       Your browser can't play this video. <a href="telos-video.mp4">Download it instead</a>.
     </video>
@@ -180,10 +195,10 @@
   </section>
 
   <section class="stat">
-    <div class="big">870,000+</div>
+    <div class="big"><!--gen:contracts_total-->900,000<!--/gen:contracts_total-->+</div>
     <div>
-      <h2>Every public contract, not just this week's</h2>
-      <p>We keep the full record of who won what: over 870,000 public contracts from Find a Tender, Contracts Finder, Public Contracts Scotland and councils' own contract registers, back to 2014. It's how we know which contracts near you are ending soon, who holds them and how often the buyer goes back to market.</p>
+      <h2>Past contracts too, not just this week's tenders</h2>
+      <p>We keep the full record of who won what: over <!--gen:contracts_total-->900,000<!--/gen:contracts_total--> public contracts from Find a Tender, Contracts Finder, Public Contracts Scotland, Sell2Wales and councils' own contract registers, back to 2014. It's how we know which contracts near you are ending soon, who holds them and how often the buyer goes back to market.</p>
     </div>
   </section>
 
@@ -200,8 +215,8 @@
     <div class="two-col">
       <div>
         <h2>What else is in the email</h2>
-        <p><b>Coming up:</b> a contract near you ending in the next 6 to 15 months, and who holds it now.</p>
-        <p><b>Closing soon:</b> anything due in the next 10 days, so nothing slips past.</p>
+        <p><b>Coming up:</b> a contract near you whose current term ends in the next 18 months, and who holds it now.</p>
+        <p><b>Closing soon:</b> a reminder of matching tenders that close in the next 10 days, so nothing slips past.</p>
       </div>
       <div>
         <h2>Who's behind it</h2>
