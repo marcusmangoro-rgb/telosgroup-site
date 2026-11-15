@@ -35,6 +35,12 @@
   a { color: var(--green); }
   a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  .ticker { background: #0f1317; color: #f2f5f7; font-size: 14px; line-height: 1; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #000; font-variant-numeric: tabular-nums; }
+  .ticker .run { display: inline-flex; animation: tick 38s linear infinite; }
+  .ticker span { padding: 10px 28px 10px 0; white-space: pre; }
+  .ticker:hover .run { animation-play-state: paused; }
+  @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .ticker .run { animation: none; } .ticker span + span { display: none; } .ticker span { padding-left: 16px; } }
   header.top { border-bottom: 1px solid var(--rule); }
   header.top .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; font-size: 18px; }
@@ -141,6 +147,7 @@
 <!--/gen:jsonld-->
 </head>
 <body>
+<div class="ticker" role="status" aria-label="This week at Telos Group"><div class="run"><span><!--gen:ticker-->Week to 15 Nov  •  13 firms joined this week  •  42 new tenders in our trades this week  •  1,806 new contract awards recorded this week<!--/gen:ticker-->  •  </span><span aria-hidden="true"><!--gen:ticker-->Week to 15 Nov  •  13 firms joined this week  •  42 new tenders in our trades this week  •  1,806 new contract awards recorded this week<!--/gen:ticker-->  •  </span></div></div>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img src="logo.svg" alt="" width="32" height="32"><span>Telos Group<small>Finding your work in the noise</small></span></a>
