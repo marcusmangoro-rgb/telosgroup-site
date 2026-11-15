@@ -46,6 +46,8 @@
   h1 { color: var(--ink); font-size: 34px; letter-spacing: -0.02em; margin: 40px 0 6px; }
   .lede { margin: 0 0 28px; color: var(--muted); }
   details { border-bottom: 1px solid var(--rule); }
+  h2.grp { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: .01em; margin: 36px 0 8px; }
+  h2.grp + details { border-top: 1px solid var(--rule); }
   details:first-of-type { border-top: 1px solid var(--rule); }
   summary { cursor: pointer; list-style: none; padding: 18px 32px 18px 0; text-wrap: balance; color: var(--ink); font-weight: 600; position: relative; }
   summary::-webkit-details-marker { display: none; }
@@ -89,7 +91,95 @@
    "name": "What is Telos Group?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "A small business run by Marcus. We send small contractors a short list of public tenders that fit their trade, area and size of job, so they don't have to search the government sites themselves."
+    "text": "A small business run by Marcus. We send small contractors a short list of public tenders that fit their trade, area and size of job, so they don't have to search the government sites themselves. It already goes to 40+ firms every Monday."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where did you get my email address?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "If we emailed you first, it's because your business works in a trade we cover and we found it in public records: usually a public contract it won or was listed on, and sometimes a public register of companies or businesses. The address came from the published record or from your firm's own website. The privacy page has the details."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I have to sign up or log in to anything?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. There's no account, no login and nothing to sign. It arrives as an ordinary email, and you reply to it like any other."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I change what I get, or stop?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Reply to any email. Tell us what to change, or that you'd rather not hear from us, and we'll sort it straight away."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What do you do with my details?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We use them to send you the email and to match it to your firm. We don't sell or share them, and we don't track whether you open our emails. The privacy page has the rest."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How often will I hear from you?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Every Monday morning. If you'd rather have them daily or monthly, just ask."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does a tender in the email look like?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Each one shows the buyer, what the work is, where it is, the value where the buyer gives one, the deadline, and a link to the official notice so you can read it in full."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does \"Coming up\" mean in the email?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A contract near you whose current term ends in the next 18 months, who holds it now and, where it's published, who to contact at the buyer. Many smaller contracts are re-let by inviting quotes from firms the buyer already knows, so it pays to get known to them before that happens."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How sure are the end dates?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Some end dates are estimates, and the email says so when they are. Contracts can also be extended. Treat the date as the time to get known to the buyer, not a promise that a tender will follow."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if nothing fits one week?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Some weeks there are no new tenders that fit you. If there are contracts coming up near you, you'll get those instead. If there's nothing at all, we don't send an email for the sake of it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What trades and areas do you cover?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Commercial and specialist cleaning, washroom hygiene, grounds maintenance, tree surgery, gritting and hedge cutting, skip hire and waste collection, scrap metal and recycling, void and house clearances, gas and heating servicing, and building repairs and maintenance, anywhere in the UK. Some smaller tenders in Scotland, Wales and Northern Ireland are only advertised locally and may not reach us yet."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I get more than one trade or area?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Tell us each trade you do and where you work, and it all comes in one email."
    }
   },
   {
@@ -105,31 +195,15 @@
    "name": "How do you decide what to send me?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "We match each new notice against what you've told us: your trade, where you work or how far you'll travel, and the contract sizes you take on. The best few go at the top, nearest and best-sized first. The more you tell us about what's useful, the better it fits."
+    "text": "We match each new notice against what you've told us: your trade, where you work or how far you'll travel, and the contract sizes you take on. We also read each notice to weed out the ones that only look relevant: supply-only contracts, consultancy, or a \"cleaning\" contract that's really drains or vehicles. The best few go at the top, nearest and best-sized first, and we check every list before it's sent. The more you tell us about what's useful, the better it fits."
    }
   },
   {
    "@type": "Question",
-   "name": "How does the AI matching work?",
+   "name": "Are firms our size really winning these?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Every new notice is checked against your trade, how far you'll travel and your usual contract size, then scored for how well it fits. AI reads each notice to weed out the ones that only look relevant: supply-only contracts, consultancy, or a \"cleaning\" contract that's really drains or vehicles. The best few go to the top of your list, and we check every list before it's sent."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How often will I hear from you?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Every Monday morning. If you'd rather have them daily or monthly, just ask."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What trades and areas do you cover?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Commercial and specialist cleaning, washroom hygiene, grounds maintenance, tree surgery, gritting and hedge cutting, skip hire and waste collection, scrap metal and recycling, void and house clearances, gas and heating servicing, and building repairs and maintenance, anywhere in the UK. Some smaller tenders in Scotland, Wales and Northern Ireland are only advertised locally and may not reach us yet."
+    "text": "Yes. On contracts in these trades where the buyer published how many bids it received, the typical contract got 2 to 7 bids, depending on the trade, and plenty are won by small local firms. The home page has the figures."
    }
   },
   {
@@ -142,10 +216,10 @@
   },
   {
    "@type": "Question",
-   "name": "What does \"Coming up\" mean in the email?",
+   "name": "Do I need to register anywhere to bid?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "A contract near you whose current term ends in the next 18 months, and who holds it now. Many smaller contracts are re-let by inviting quotes from firms the buyer already knows, so it pays to get known to them before that happens."
+    "text": "Usually yes, but not with us. Each notice says where bids go, which is normally the buyer's own tender portal, and registering there doesn't take long. If you're not sure which one a tender needs, reply and we'll tell you."
    }
   },
   {
@@ -154,22 +228,6 @@
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "No, you decide what to go for and you submit the bid. But we can help you get it done faster. We use AI to read the tender pack, pull out every requirement, deadline and scoring criterion into one checklist, and draft answers from your own past bids for you to check and finish. If a tender looks worth it, reply to the email and we can talk it through."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Where did you get my email address?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "If we emailed you first, it's because your business works in a trade we cover and we found it in public records: usually a public contract it won or was listed on, and sometimes a public register of companies or businesses. The address came from the published record or from your firm's own website. The privacy page has the details."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How do I change what I get, or stop?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Reply to any email. Tell us what to change, or that you'd rather not hear from us, and we'll sort it straight away."
    }
   },
   {
@@ -217,49 +275,11 @@
   <h1>Questions</h1>
   <p class="lede">The short answers. Anything else, just email <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a>.</p>
 
+  <h2 class="grp">Who we are, and why you heard from us</h2>
+
   <details open>
     <summary>What is Telos Group?</summary>
-    <div><p>A small business run by Marcus. We send small contractors a short list of public tenders that fit their trade, area and size of job, so they don't have to search the government sites themselves.</p></div>
-  </details>
-
-  <details>
-    <summary>Where do the tenders come from?</summary>
-    <div><p>The official UK tender portals, where councils, schools, NHS trusts and housing associations post their tenders. To see when existing contracts end, we also use other public records of what public bodies buy.</p></div>
-  </details>
-
-  <details>
-    <summary>How do you decide what to send me?</summary>
-    <div><p>We match each new notice against what you've told us: your trade, where you work or how far you'll travel, and the contract sizes you take on. The best few go at the top, nearest and best-sized first. The more you tell us about what's useful, the better it fits.</p></div>
-  </details>
-
-  <details>
-    <summary>How does the AI matching work?</summary>
-    <div><p>Every new notice is checked against your trade, how far you'll travel and your usual contract size, then scored for how well it fits. AI reads each notice to weed out the ones that only look relevant: supply-only contracts, consultancy, or a "cleaning" contract that's really drains or vehicles. The best few go to the top of your list, and we check every list before it's sent.</p></div>
-  </details>
-
-  <details>
-    <summary>How often will I hear from you?</summary>
-    <div><p>Every Monday morning. If you'd rather have them daily or monthly, just ask.</p></div>
-  </details>
-
-  <details>
-    <summary>What trades and areas do you cover?</summary>
-    <div><p>Commercial and specialist cleaning, washroom hygiene, grounds maintenance, tree surgery, gritting and hedge cutting, skip hire and waste collection, scrap metal and recycling, void and house clearances, gas and heating servicing, and building repairs and maintenance, anywhere in the UK. Some smaller tenders in Scotland, Wales and Northern Ireland are only advertised locally and may not reach us yet.</p></div>
-  </details>
-
-  <details>
-    <summary>What is a two-stage tender?</summary>
-    <div><p>Some buyers shortlist first. You send a short "request to take part" by an early deadline, and only shortlisted firms are invited to bid in full. It's easy to miss because the final deadline is often the one people notice. We always show you the first deadline.</p></div>
-  </details>
-
-  <details>
-    <summary>What does "Coming up" mean in the email?</summary>
-    <div><p>A contract near you whose current term ends in the next <!--gen:window_months-->18<!--/gen:window_months--> months, and who holds it now. Many smaller contracts are re-let by inviting quotes from firms the buyer already knows, so it pays to get known to them before that happens.</p></div>
-  </details>
-
-  <details>
-    <summary>Do you bid for us?</summary>
-    <div><p>No, you decide what to go for and you submit the bid. But we can help you get it done faster. We use AI to read the tender pack, pull out every requirement, deadline and scoring criterion into one checklist, and draft answers from your own past bids for you to check and finish.</p><p>If a tender looks worth it, reply to the email and we can talk it through.</p></div>
+    <div><p>A small business run by Marcus. We send small contractors a short list of public tenders that fit their trade, area and size of job, so they don't have to search the government sites themselves. It already goes to <!--gen:firm_count-->40+<!--/gen:firm_count--> firms every Monday.</p></div>
   </details>
 
   <details>
@@ -268,8 +288,89 @@
   </details>
 
   <details>
+    <summary>Do I have to sign up or log in to anything?</summary>
+    <div><p>No. There's no account, no login and nothing to sign. It arrives as an ordinary email, and you reply to it like any other.</p></div>
+  </details>
+
+  <details>
     <summary>How do I change what I get, or stop?</summary>
     <div><p>Reply to any email. Tell us what to change, or that you'd rather not hear from us, and we'll sort it straight away.</p></div>
+  </details>
+
+  <details>
+    <summary>What do you do with my details?</summary>
+    <div><p>We use them to send you the email and to match it to your firm. We don't sell or share them, and we don't track whether you open our emails. The <a href="privacy.html">privacy page</a> has the rest.</p></div>
+  </details>
+
+  <h2 class="grp">What you get</h2>
+
+  <details>
+    <summary>How often will I hear from you?</summary>
+    <div><p>Every Monday morning. If you'd rather have them daily or monthly, just ask.</p></div>
+  </details>
+
+  <details>
+    <summary>What does a tender in the email look like?</summary>
+    <div><p>Each one shows the buyer, what the work is, where it is, the value where the buyer gives one, the deadline, and a link to the official notice so you can read it in full.</p></div>
+  </details>
+
+  <details>
+    <summary>What does "Coming up" mean in the email?</summary>
+    <div><p>A contract near you whose current term ends in the next <!--gen:window_months-->18<!--/gen:window_months--> months, who holds it now and, where it's published, who to contact at the buyer. Many smaller contracts are re-let by inviting quotes from firms the buyer already knows, so it pays to get known to them before that happens.</p></div>
+  </details>
+
+  <details>
+    <summary>How sure are the end dates?</summary>
+    <div><p>Some end dates are estimates, and the email says so when they are. Contracts can also be extended. Treat the date as the time to get known to the buyer, not a promise that a tender will follow.</p></div>
+  </details>
+
+  <details>
+    <summary>What if nothing fits one week?</summary>
+    <div><p>Some weeks there are no new tenders that fit you. If there are contracts coming up near you, you'll get those instead. If there's nothing at all, we don't send an email for the sake of it.</p></div>
+  </details>
+
+  <details>
+    <summary>What trades and areas do you cover?</summary>
+    <div><p>Commercial and specialist cleaning, washroom hygiene, grounds maintenance, tree surgery, gritting and hedge cutting, skip hire and waste collection, scrap metal and recycling, void and house clearances, gas and heating servicing, and building repairs and maintenance, anywhere in the UK. Some smaller tenders in Scotland, Wales and Northern Ireland are only advertised locally and may not reach us yet.</p></div>
+  </details>
+
+  <details>
+    <summary>Can I get more than one trade or area?</summary>
+    <div><p>Yes. Tell us each trade you do and where you work, and it all comes in one email.</p></div>
+  </details>
+
+  <h2 class="grp">How we pick what to send</h2>
+
+  <details>
+    <summary>Where do the tenders come from?</summary>
+    <div><p>The official UK tender portals, where councils, schools, NHS trusts and housing associations post their tenders. To see when existing contracts end, we also use other public records of what public bodies buy.</p></div>
+  </details>
+
+  <details>
+    <summary>How do you decide what to send me?</summary>
+    <div><p>We match each new notice against what you've told us: your trade, where you work or how far you'll travel, and the contract sizes you take on. We also read each notice to weed out the ones that only look relevant: supply-only contracts, consultancy, or a "cleaning" contract that's really drains or vehicles. The best few go at the top, nearest and best-sized first, and we check every list before it's sent. The more you tell us about what's useful, the better it fits.</p></div>
+  </details>
+
+  <details>
+    <summary>Are firms our size really winning these?</summary>
+    <div><p>Yes. On contracts in these trades where the buyer published how many bids it received, the typical contract got <!--gen:bids_range-->2 to 7<!--/gen:bids_range--> bids, depending on the trade, and plenty are won by small local firms. The <a href="./">home page</a> has the figures.</p></div>
+  </details>
+
+  <h2 class="grp">Bidding</h2>
+
+  <details>
+    <summary>What is a two-stage tender?</summary>
+    <div><p>Some buyers shortlist first. You send a short "request to take part" by an early deadline, and only shortlisted firms are invited to bid in full. It's easy to miss because the final deadline is often the one people notice. We always show you the first deadline.</p></div>
+  </details>
+
+  <details>
+    <summary>Do I need to register anywhere to bid?</summary>
+    <div><p>Usually yes, but not with us. Each notice says where bids go, which is normally the buyer's own tender portal, and registering there doesn't take long. If you're not sure which one a tender needs, reply and we'll tell you.</p></div>
+  </details>
+
+  <details>
+    <summary>Do you bid for us?</summary>
+    <div><p>No, you decide what to go for and you submit the bid. But we can help you get it done faster. We use AI to read the tender pack, pull out every requirement, deadline and scoring criterion into one checklist, and draft answers from your own past bids for you to check and finish.</p><p>If a tender looks worth it, reply to the email and we can talk it through.</p></div>
   </details>
 
   <details>
@@ -277,7 +378,6 @@
     <div><p>Possibly. A lot of small-firm admin, like quotes, rotas, compliance reminders and client reports, can now be cut down with AI. If there's a job that eats your week, tell us about it and we'll say honestly whether we can help.</p></div>
   </details>
 
-  <div class="ask"><p><b>Didn't find your answer?</b> Email <a href="mailto:mangoro@telosgroup.co.uk">mangoro@telosgroup.co.uk</a> and Marcus will reply himself.</p></div>
 </main>
 
 <footer>
