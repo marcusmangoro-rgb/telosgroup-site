@@ -4,7 +4,7 @@
 
 ## Who we are
 
-Telos Group is a small business run by Marcus Mangoro. Its tagline is "Finding your work in the noise". We are already helping <!--gen:firm_count-->50+<!--/gen:firm_count--> firms across waste and recycling, cleaning, grounds, tree surgery and building maintenance.
+Telos Group is a small business run by Marcus Mangoro. Its tagline is "Finding your work in the noise". We are already helping <!--gen:firm_count-->60+<!--/gen:firm_count--> firms across waste and recycling, cleaning, grounds, tree surgery and building maintenance.
 
 ## The Monday email
 
