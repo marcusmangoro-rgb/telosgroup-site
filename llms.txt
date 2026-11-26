@@ -13,7 +13,7 @@ The email arrives every Monday morning. Firms can ask for it daily or monthly in
 - Coming up: a contract near the firm whose current term ends in the next <!--gen:window_months-->18<!--/gen:window_months--> months, and who holds it now.
 - Closing soon: a reminder of matching tenders that close in the next <!--gen:closing_days-->10<!--/gen:closing_days--> days.
 
-Every new notice is checked against the firm's trade, how far it will travel and its usual contract size, then scored for fit. AI reads each notice to weed out ones that only look relevant. Marcus checks every list before it is sent. Firms reply to say what is useful, and the list changes to match.
+Every new notice is checked against the firm's trade, how far it will travel and its usual contract size, then scored for fit. AI reads each notice to weed out ones that only look relevant. Every list goes through our checks before it is sent. Firms reply to say what is useful, and the list changes to match.
 
 ## Trades and areas
 
