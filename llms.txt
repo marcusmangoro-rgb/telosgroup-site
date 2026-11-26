@@ -11,7 +11,7 @@ Telos Group is a small business run by Marcus Mangoro. Its tagline is "Finding y
 The email arrives every Monday morning. Firms can ask for it daily or monthly instead. Each email lists the open tenders that best match the firm, with the real deadline and a link to each one. For two-stage tenders it shows the first deadline, the request to take part. It also includes:
 
 - Coming up: a contract near the firm whose current term ends in the next <!--gen:window_months-->18<!--/gen:window_months--> months, and who holds it now.
-- Closing soon: a reminder of matching tenders that close in the next 10 days.
+- Closing soon: a reminder of matching tenders that close in the next <!--gen:closing_days-->10<!--/gen:closing_days--> days.
 
 Every new notice is checked against the firm's trade, how far it will travel and its usual contract size, then scored for fit. AI reads each notice to weed out ones that only look relevant. Marcus checks every list before it is sent. Firms reply to say what is useful, and the list changes to match.
 
@@ -23,9 +23,9 @@ Areas: anywhere in the UK. Tenders come from the official UK tender portals, and
 
 ## Most small contracts were not advertised on Find a Tender
 
-We looked at 1,427 contracts awarded in these trades from January to October 2026. Of the 659 worth under £140k, about 8 in 10 had no tender notice on Find a Tender. They only showed up once the work had been awarded.
+We looked at <!--gen:nta_contracts-->1,427<!--/gen:nta_contracts--> contracts awarded in these trades from <!--gen:nta_period-->January to October 2026<!--/gen:nta_period-->. Of the <!--gen:nta_small-->659<!--/gen:nta_small--> worth under <!--gen:nta_cut-->£140k<!--/gen:nta_cut-->, about <!--gen:nta_share-->8 in 10<!--/gen:nta_share--> had no tender notice on Find a Tender. They only showed up once the work had been awarded.
 
-Source: Telos Group analysis of Find a Tender award and tender notices, January to October 2026. Some of these contracts may have been advertised elsewhere, so treat the figure as an estimate. Under £140k means below the central government services threshold of £139,688.
+Source: Telos Group analysis of Find a Tender award and tender notices, <!--gen:nta_period-->January to October 2026<!--/gen:nta_period-->. Some of these contracts may have been advertised elsewhere, so treat the figure as an estimate. Under <!--gen:nta_cut-->£140k<!--/gen:nta_cut--> means below the central government services threshold of <!--gen:nta_threshold-->£139,688<!--/gen:nta_threshold-->.
 
 ## How a firm asks to be added
 
@@ -33,7 +33,7 @@ Email mangoro@telosgroup.co.uk with your trade and the area you cover. Marcus re
 
 ## Contracts coming up
 
-Pages that count the public contracts in each trade and part of the UK whose current term ends in the next 18 months. Counts, size bands and quarters only; no buyer names. Method: https://telosgroup.co.uk/contracts/how-we-counted.html
+Pages that count the public contracts in each trade and part of the UK whose current term ends in the next <!--gen:window_months-->18<!--/gen:window_months--> months. Counts, size bands and quarters only; no buyer names. Method: https://telosgroup.co.uk/contracts/how-we-counted.html
 
 - [Contracts coming up, by trade and area](https://telosgroup.co.uk/contracts/)
 <!--gen:contracts_pages-->
