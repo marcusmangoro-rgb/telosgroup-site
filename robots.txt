@@ -1,6 +1,8 @@
 # Every crawler may read the whole site. The AI crawlers below are named so it is plain they are welcome too.
 User-agent: *
 Allow: /
+# /t/ only forwards the Monday email's tender links to the official notice: nothing to index
+Disallow: /t/
 
 User-agent: GPTBot
 User-agent: OAI-SearchBot
@@ -16,5 +18,6 @@ User-agent: bingbot
 User-agent: Applebot
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /t/
 
 Sitemap: https://telosgroup.co.uk/sitemap.xml
